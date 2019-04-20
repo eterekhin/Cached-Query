@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ContentModelStore">
+    <e p="C:\Users\evgeniy\.nuget\packages\nunit3testadapter\3.11.0\build\netcoreapp1.0\nunit.engine.netstandard.dll" t="Include" />
+    <e p="C:\Users\evgeniy\.nuget\packages\nunit3testadapter\3.11.0\build\netcoreapp1.0\NUnit3.TestAdapter.dll" t="Include" />
+    <e p="C:\Users\evgeniy\.nuget\packages\nunit3testadapter\3.11.0\build\netcoreapp1.0\NUnit3.TestAdapter.pdb" t="Include" />
+    <e p="C:\Users\evgeniy\.Rider2018.3\system\extResources" t="IncludeRecursive" />
+    <e p="C:\Users\evgeniy\.Rider2018.3\system\resharper-host\local\Transient\ReSharperHost\v183\SolutionCaches\_HabrCacheQuery.-1806225208.00" t="ExcludeRecursive" />
+    <e p="C:\Users\evgeniy\RiderProjects\HabrCacheQuery" t="IncludeFlat">
+      <e p="HabrCacheQuery" t="IncludeRecursive">
+        <e p="appsettings.Development.json" t="Include" />
+        <e p="appsettings.json" t="Include" />
+        <e p="bin" t="ExcludeRecursive" />
+        <e p="Controllers" t="Include">
+          <e p="ValuesController.cs" t="Include" />
+        </e>
+        <e p="ExampleQuery" t="Include">
+          <e p="DelayQuery.cs" t="Include" />
+        </e>
+        <e p="HabrCacheQuery.csproj" t="IncludeRecursive" />
+        <e p="obj" t="ExcludeRecursive">
+          <e p="Debug" t="Include">
+            <e p="netcoreapp2.2" t="Include">
+              <e p="HabrCacheQuery.AssemblyInfo.cs" t="Include" />
+            </e>
+          </e>
+        </e>
+        <e p="Program.cs" t="Include" />
+        <e p="Properties" t="Include">
+          <e p="launchSettings.json" t="Include" />
+        </e>
+        <e p="Query" t="Include">
+          <e p="CacheQuery.cs" t="Include" />
+          <e p="IQuery.cs" t="Include" />
+        </e>
+        <e p="ServiceCollectionExtensions" t="Include">
+          <e p="AddCachedQueriesExtensions.cs" t="Include" />
+        </e>
+        <e p="Startup.cs" t="Include" />
+      </e>
+      <e p="HabrCacheQuery.sln" t="IncludeFlat" />
+      <e p="HabrCacheQueryTests" t="IncludeRecursive">
+        <e p="BaseTest.cs" t="Include" />
+        <e p="bin" t="ExcludeRecursive" />
+        <e p="HabrCacheQueryTests.csproj" t="IncludeRecursive" />
+        <e p="obj" t="ExcludeRecursive">
+          <e p="Debug" t="Include">
+            <e p="netcoreapp2.2" t="Include">
+              <e p="HabrCacheQueryTests.AssemblyInfo.cs" t="Include" />
+              <e p="HabrCacheQueryTests.Program.cs" t="Include" />
+            </e>
+          </e>
+        </e>
+        <e p="UnitTest1.cs" t="Include" />
+      </e>
+      <e p="packages" t="ExcludeRecursive" />
+    </e>
+  </component>
+</project>
