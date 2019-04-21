@@ -47,7 +47,7 @@ namespace Tests
         private IQuery<StubForFodyCanCacheMySelf, Something> Query { get; set; }
         private IAsyncQuery<StubForFodyCanCacheMySelf, Something> AsyncQuery { get; set; }
 
-        public FodyCacheCacheTests() : base(sc => { }, sc => sc.AddCacheQueryUsingFody())
+        public FodyCacheCacheTests() : base(sc => { })
         {
         }
     }

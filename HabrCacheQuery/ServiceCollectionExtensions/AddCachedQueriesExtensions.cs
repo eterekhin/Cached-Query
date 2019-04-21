@@ -46,63 +46,60 @@ namespace HabrCacheQuery.ServiceCollectionExtensions
             .Select(selector)
             .ToArray();
 
+        private static readonly Func<Type, bool> EqualsGetHashCodeOverride = type => type
+            .GetMethods().Where(x => new[] {nameof(GetHashCode), nameof(Equals)}.Contains(x.Name))
+            .Any(x => x.DeclaringType != typeof(object));
+
         #endregion
 
-        public static void AddCacheQueryUsingFody(this IServiceCollection serviceCollection)
+    
+
+        public static void AddCachedQueries(this IServiceCollection serviceCollection)
         {
-            serviceCollection.AddCachedQueries(
-                typeof(CanCacheMySelfUsingFody),
-                typeof(CacheQueryUsingFody<,>),
-                typeof(AsyncCacheQueryUsingFody<,>));
-        }
+            
+            var asyncQueryScanAssemblesPredicate = AggregatePredicates(IsClass, ContainsAsyncQueryInterface);
 
-        public static void AddCacheQueryUsingReflection(this IServiceCollection serviceCollection)
-        {
-            serviceCollection.AddCachedQueries(
-                typeof(CanCacheMySelfUsingReflection),
-                typeof(CacheQueryUsingReflection<,>),
-                typeof(AsyncCacheQueryUsingReflection<,>));
-        }
+            var queryScanAssemblesPredicate =
+                AggregatePredicates(IsClass, x => !asyncQueryScanAssemblesPredicate(x), ContainsQueryInterface);
+            
+            var asyncQueries = GetAssemblesTypes(asyncQueryScanAssemblesPredicate, DestAsyncQuerySourceType);
+            var queries = GetAssemblesTypes(queryScanAssemblesPredicate, DestQuerySourceType);
 
-
-        private static void AddCachedQueries(
-            this IServiceCollection serviceCollection,
-            Type dtoCacheInterface, Type queryCacheType, Type asyncQueryCacheType)
-        {
-            var asyncQueryPredicate = AggregatePredicates(
-                IsClass,
-                x => IsCachedQuery(dtoCacheInterface, x),
-                ContainsAsyncQueryInterface);
-
-            var queryPredicate = AggregatePredicates(
-                IsClass,
-                x => IsCachedQuery(dtoCacheInterface, x),
-                x => !asyncQueryPredicate(x),
-                ContainsQueryInterface);
-
-            var asyncQueries = GetAssemblesTypes(asyncQueryPredicate, DestAsyncQuerySourceType);
-            var queries = GetAssemblesTypes(queryPredicate, DestQuerySourceType);
-
-            serviceCollection.QueryDecorator(asyncQueries, asyncQueryCacheType);
-            serviceCollection.QueryDecorator(queries, queryCacheType);
+            serviceCollection.QueryDecorator(asyncQueries, (sourceType, destType) =>
+            {
+                // ReSharper disable once ConvertToLambdaExpression
+                return (EqualsGetHashCodeOverride(sourceType)
+                    ? typeof(CacheAsyncQuery<,>)
+                    : typeof(CacheAsyncQueryWithReflectionComparer<,>)).MakeGenericType(sourceType, destType);
+            });
+            serviceCollection.QueryDecorator(queries, (sourceType, destType) =>
+            {
+                // ReSharper disable once ConvertToLambdaExpression
+                return (EqualsGetHashCodeOverride(sourceType)
+                    ? typeof(CacheQuery<,>)
+                    : typeof(CacheQueryWithReflectionComparer<,>)).MakeGenericType(sourceType, destType);
+            });
         }
 
         private static void QueryDecorator(this IServiceCollection serviceCollection,
-            IEnumerable<(Type dest, Type source)> parameters, Type decoratorDefinition,
+            IEnumerable<(Type dest, Type source)> parameters,
+            Func<Type, Type, Type> sourceTypeDestTypeToDecoratorType,
             ServiceLifetime lifeTime = ServiceLifetime.Scoped)
         {
             foreach (var (dest, source) in parameters)
-            {
                 serviceCollection.AddDecorator(
-                    decoratorDefinition.MakeGenericType(source.GenericTypeArguments),
+                    sourceTypeDestTypeToDecoratorType(source.GenericTypeArguments[0], source.GenericTypeArguments[1]),
                     source,
                     dest,
                     lifeTime);
-            }
         }
 
-        private static void AddDecorator(this IServiceCollection serviceCollection, Type dt, Type queryType,
-            Type destType, ServiceLifetime lifetime = ServiceLifetime.Scoped)
+
+        private static void AddDecorator(
+            this IServiceCollection serviceCollection,
+            Type dt, Type queryType,
+            Type destType,
+            ServiceLifetime lifetime = ServiceLifetime.Scoped)
         {
             // ReSharper disable once ConvertToLocalFunction
             Func<IServiceProvider, object> factory = provider => ActivatorUtilities.CreateInstance(provider, dt,

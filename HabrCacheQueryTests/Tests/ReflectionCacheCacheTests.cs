@@ -25,12 +25,12 @@ namespace Tests
         public Something Query(Dto input) => _repository.GetSomething();
     }
 
-    public class Dto : CanCacheMySelfUsingReflection
+    public class Dto
     {
         public int One { get; set; }
     }
 
-    public class DtoWithIEnumerable : CanCacheMySelfUsingReflection
+    public class DtoWithIEnumerable
     {
         public IEnumerable<int> En1 { get; set; }
         public string[] En2 { get; set; }
@@ -50,7 +50,7 @@ namespace Tests
         public Something Query(DtoWithIEnumerable input) => _repository.GetSomething();
     }
 
-    public class DtoWithClass : CanCacheMySelfUsingReflection
+    public class DtoWithClass
     {
         public int Int { get; set; }
         public DtoWithIEnumerable DtoWithIEnumerable { get; set; }
@@ -76,14 +76,14 @@ namespace Tests
         private IQuery<DtoWithIEnumerable, Something> queryWithIEnumerable { get; set; }
         private IQuery<DtoWithClass, Something> queryWithClass { get; set; }
 
-        public ReflectionCacheCacheTests() : base(sc => { }, sc => sc.AddCacheQueryUsingReflection())
+        public ReflectionCacheCacheTests() : base(sc => { })
         {
         }
 
         [SetUp]
         public void OnTimeSetup()
         {
-            ServiceProviderInitial(sc => { }, sc => sc.AddCacheQueryUsingReflection());
+            ServiceProviderInitial(sc => { });
             using (var scope = ServiceScope)
             {
                 query = scope.ServiceProvider.GetService<IQuery<Dto, Something>>();

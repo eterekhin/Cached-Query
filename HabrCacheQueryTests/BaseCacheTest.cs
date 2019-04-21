@@ -20,19 +20,17 @@ namespace Tests
 
 
         protected BaseCacheTest(
-            Action<IServiceCollection> otherRegistrations,
-            Action<ServiceCollection> cachedQueryRealization)
+            Action<IServiceCollection> otherRegistrations)
         {
-            ServiceProviderInitial(otherRegistrations, cachedQueryRealization);
+            ServiceProviderInitial(otherRegistrations);
         }
 
-        protected void ServiceProviderInitial(Action<IServiceCollection> otherRegistrations,
-            Action<ServiceCollection> cachedQueryRealization)
+        protected void ServiceProviderInitial(Action<IServiceCollection> otherRegistrations)
         {
             RepositoryMock = new Mock<MockRepository>();
             var collection = new ServiceCollection();
             collection.AddScoped<IRepository, MockRepository>(x => MockRepositoryObject);
-            cachedQueryRealization(collection);
+            collection.AddCachedQueries();
             otherRegistrations(collection);
             ServiceProvider = collection.BuildServiceProvider();
         }

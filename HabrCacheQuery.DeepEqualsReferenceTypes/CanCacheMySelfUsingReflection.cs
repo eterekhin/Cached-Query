@@ -18,7 +18,7 @@ namespace HabrCacheQuery.ServiceCollectionExtensions
 
         private static int PrimitiveHashCode(object obj) => obj.GetHashCode();
 
-        private static int ClassHashCode(object obj) => 
+        private static int ClassHashCode(object obj) =>
             DeepEquals.GetPropFieldValue(obj).Aggregate(0, (a, c) => a ^ GetHashCode(c.value) * 357);
 
         private static int IEnumerableGetHashCode(object obj)
@@ -78,21 +78,19 @@ namespace HabrCacheQuery.ServiceCollectionExtensions
             return MatchAndAction(o1, o2, o1.GetType());
         }
 
-        private static Boolean EqualsClass(object o1, object o2)
+        private static bool EqualsClass(object o1, object o2)
         {
             if (o1.GetType() != o2.GetType()) throw new ArgumentException();
-            var memberTypeValueO1 = GetPropFieldValue(o1);
-            var memberTypeValueO2 = GetPropFieldValue(o2);
-            var zip = memberTypeValueO1.Zip(memberTypeValueO2, (x, y) => (x.memberType, x.value, y.value));
-            return zip.Aggregate(true, (a, c) => a && DeepEqualsCommonType(c.Item2, c.Item3));
+            return GetPropFieldValue(o1).Zip(GetPropFieldValue(o2), (x, y) => (x.memberType, x.value, y.value))
+                .Aggregate(true, (a, c) => a && DeepEqualsCommonType(c.Item2, c.Item3));
         }
 
-        private static Boolean EqualsPrimitive(object o1, object o2)
+        private static bool EqualsPrimitive(object o1, object o2)
         {
             return o1.Equals(o2);
         }
 
-        private static Boolean EqualsIEnumerable(object o1, object o2)
+        private static bool EqualsIEnumerable(object o1, object o2)
         {
             var equals = true;
             if (o1 is IEnumerable en1 && o2 is IEnumerable en2)
@@ -109,6 +107,11 @@ namespace HabrCacheQuery.ServiceCollectionExtensions
             return equals;
         }
 
+        private static IEnumerable<T> GetIEnumerable<T>(IEnumerator<T> enumerator)
+        {
+            while (enumerator.MoveNext())
+                yield return enumerator.Current;
+        }
 
         private static bool MatchAndAction(object o1, object o2, Type type)
         {
@@ -144,12 +147,4 @@ namespace HabrCacheQuery.ServiceCollectionExtensions
     }
 
     #endregion
-
-    public abstract class CanCacheMySelfUsingReflection
-    {
-        public override bool Equals(object obj) => DeepEquals.DeepEqualsCommonType(obj, this);
-
-
-        public override int GetHashCode() => Hash.GetHashCode(this);
-    }
 }
