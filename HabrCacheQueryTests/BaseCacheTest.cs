@@ -12,6 +12,18 @@ using MockRepository = HabrCacheQuery.ExampleQuery.MockRepository;
 
 namespace Tests
 {
+    public class CacheUsingCoreContainerBaseTests : BaseCacheTest
+    {
+        protected CacheUsingCoreContainerBaseTests()
+            : base(collection =>
+            {
+                collection.AddScoped<IRepository, MockRepository>(x => MockRepositoryObject);
+                collection.AddCachedQueries();
+            })
+        {
+        }
+    }
+
     public class BaseCacheTest
     {
         private readonly Action<ServiceCollection> _cachedQueryRealization;
@@ -20,18 +32,17 @@ namespace Tests
 
 
         protected BaseCacheTest(
-            Action<IServiceCollection> otherRegistrations)
+            Action<IServiceCollection> registrations)
         {
-            ServiceProviderInitial(otherRegistrations);
+            ServiceProviderInitial(registrations);
         }
 
-        protected void ServiceProviderInitial(Action<IServiceCollection> otherRegistrations)
+        protected void ServiceProviderInitial(Action<IServiceCollection> Registrations)
         {
             RepositoryMock = new Mock<MockRepository>();
             var collection = new ServiceCollection();
-            collection.AddScoped<IRepository, MockRepository>(x => MockRepositoryObject);
-            collection.AddCachedQueries();
-            otherRegistrations(collection);
+
+            Registrations(collection);
             ServiceProvider = collection.BuildServiceProvider();
         }
 

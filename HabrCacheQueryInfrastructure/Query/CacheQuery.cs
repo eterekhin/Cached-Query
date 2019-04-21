@@ -1,12 +1,8 @@
-using System;
 using System.Collections.Concurrent;
 using System.Collections.Generic;
-using System.Linq;
 using System.Threading.Tasks;
 using HabrCacheQuery.Query;
-using Microsoft.EntityFrameworkCore.Internal;
 using static HabrCacheQuery.ServiceCollectionExtensions.DeepEquals;
-using static HabrCacheQuery.ServiceCollectionExtensions.Hash;
 
 namespace HabrCacheQuery.ServiceCollectionExtensions
 {

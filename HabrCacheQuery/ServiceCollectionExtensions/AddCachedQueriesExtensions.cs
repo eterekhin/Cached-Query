@@ -46,36 +46,29 @@ namespace HabrCacheQuery.ServiceCollectionExtensions
             .Select(selector)
             .ToArray();
 
-        private static readonly Func<Type, bool> EqualsGetHashCodeOverride = type => type
-            .GetMethods().Where(x => new[] {nameof(GetHashCode), nameof(Equals)}.Contains(x.Name))
-            .Any(x => x.DeclaringType != typeof(object));
-
         #endregion
-
-    
 
         public static void AddCachedQueries(this IServiceCollection serviceCollection)
         {
-            
             var asyncQueryScanAssemblesPredicate = AggregatePredicates(IsClass, ContainsAsyncQueryInterface);
 
             var queryScanAssemblesPredicate =
                 AggregatePredicates(IsClass, x => !asyncQueryScanAssemblesPredicate(x), ContainsQueryInterface);
-            
+
             var asyncQueries = GetAssemblesTypes(asyncQueryScanAssemblesPredicate, DestAsyncQuerySourceType);
             var queries = GetAssemblesTypes(queryScanAssemblesPredicate, DestQuerySourceType);
 
             serviceCollection.QueryDecorator(asyncQueries, (sourceType, destType) =>
             {
                 // ReSharper disable once ConvertToLambdaExpression
-                return (EqualsGetHashCodeOverride(sourceType)
+                return (TypeCheckers.EqualsGetHashCodeOverride(sourceType)
                     ? typeof(CacheAsyncQuery<,>)
                     : typeof(CacheAsyncQueryWithReflectionComparer<,>)).MakeGenericType(sourceType, destType);
             });
             serviceCollection.QueryDecorator(queries, (sourceType, destType) =>
             {
                 // ReSharper disable once ConvertToLambdaExpression
-                return (EqualsGetHashCodeOverride(sourceType)
+                return (TypeCheckers.EqualsGetHashCodeOverride(sourceType)
                     ? typeof(CacheQuery<,>)
                     : typeof(CacheQueryWithReflectionComparer<,>)).MakeGenericType(sourceType, destType);
             });

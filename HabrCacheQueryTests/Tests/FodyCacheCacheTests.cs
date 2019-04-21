@@ -14,7 +14,7 @@ using MockRepository = HabrCacheQuery.ExampleQuery.MockRepository;
 
 namespace Tests
 {
-    public class FodyCacheCacheTests : BaseCacheTest
+    public class FodyCacheCacheTests : CacheUsingCoreContainerBaseTests
     {
         [SetUp]
         public void Setup()
@@ -47,8 +47,5 @@ namespace Tests
         private IQuery<StubForFodyCanCacheMySelf, Something> Query { get; set; }
         private IAsyncQuery<StubForFodyCanCacheMySelf, Something> AsyncQuery { get; set; }
 
-        public FodyCacheCacheTests() : base(sc => { })
-        {
-        }
     }
 }

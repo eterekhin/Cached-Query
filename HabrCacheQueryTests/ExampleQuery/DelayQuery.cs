@@ -5,7 +5,7 @@ using Microsoft.AspNetCore.DataProtection.Repositories;
 
 namespace HabrCacheQuery.ExampleQuery
 {
-    public class StubForFodyCanCacheMySelf : CanCacheMySelfUsingFody
+    public class StubForFodyCanCacheMySelf 
     {
         public int StubInt { get; set; }
     }

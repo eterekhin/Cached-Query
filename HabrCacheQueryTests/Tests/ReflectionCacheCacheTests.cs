@@ -70,15 +70,11 @@ namespace Tests
 
     #endregion
 
-    public class ReflectionCacheCacheTests : BaseCacheTest
+    public class ReflectionCacheCacheTests : CacheUsingCoreContainerBaseTests
     {
         private IQuery<Dto, Something> query { get; set; }
         private IQuery<DtoWithIEnumerable, Something> queryWithIEnumerable { get; set; }
         private IQuery<DtoWithClass, Something> queryWithClass { get; set; }
-
-        public ReflectionCacheCacheTests() : base(sc => { })
-        {
-        }
 
         [SetUp]
         public void OnTimeSetup()

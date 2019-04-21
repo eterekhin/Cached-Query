@@ -6,6 +6,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HabrCacheQueryTests", "Habr
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HabrCacheQuery.DeepEqualsReferenceTypes", "HabrCacheQuery.DeepEqualsReferenceTypes\HabrCacheQuery.DeepEqualsReferenceTypes.csproj", "{4E8F44E1-AE16-42A0-A96D-8138460D798E}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HabrCacheQueryInfrastructure", "HabrCacheQueryInfrastructure\HabrCacheQueryInfrastructure.csproj", "{A58692F8-DD4B-468C-AF19-DF388EAB8274}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -24,5 +26,9 @@ Global
 		{4E8F44E1-AE16-42A0-A96D-8138460D798E}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{4E8F44E1-AE16-42A0-A96D-8138460D798E}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{4E8F44E1-AE16-42A0-A96D-8138460D798E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A58692F8-DD4B-468C-AF19-DF388EAB8274}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A58692F8-DD4B-468C-AF19-DF388EAB8274}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A58692F8-DD4B-468C-AF19-DF388EAB8274}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A58692F8-DD4B-468C-AF19-DF388EAB8274}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 EndGlobal
