@@ -14,9 +14,7 @@
         <e p="Controllers" t="Include">
           <e p="ValuesController.cs" t="Include" />
         </e>
-        <e p="ExampleQuery" t="Include">
-          <e p="DelayQuery.cs" t="Include" />
-        </e>
+        <e p="FodyWeavers.xml" t="Include" />
         <e p="HabrCacheQuery.csproj" t="IncludeRecursive" />
         <e p="obj" t="ExcludeRecursive">
           <e p="Debug" t="Include">
@@ -31,6 +29,8 @@
         </e>
         <e p="Query" t="Include">
           <e p="CacheQuery.cs" t="Include" />
+          <e p="CanCacheMySelfUsingFody.cs" t="Include" />
+          <e p="CanCacheMySelfUsingReflection.cs" t="Include" />
           <e p="IQuery.cs" t="Include" />
         </e>
         <e p="ServiceCollectionExtensions" t="Include">
@@ -40,8 +40,12 @@
       </e>
       <e p="HabrCacheQuery.sln" t="IncludeFlat" />
       <e p="HabrCacheQueryTests" t="IncludeRecursive">
-        <e p="BaseTest.cs" t="Include" />
+        <e p="BaseCacheTest.cs" t="Include" />
         <e p="bin" t="ExcludeRecursive" />
+        <e p="ExampleQuery" t="Include">
+          <e p="DelayQuery.cs" t="Include" />
+        </e>
+        <e p="FodyWeavers.xsd" t="Include" />
         <e p="HabrCacheQueryTests.csproj" t="IncludeRecursive" />
         <e p="obj" t="ExcludeRecursive">
           <e p="Debug" t="Include">
@@ -51,7 +55,10 @@
             </e>
           </e>
         </e>
-        <e p="UnitTest1.cs" t="Include" />
+        <e p="Tests" t="Include">
+          <e p="FodyCacheCacheTests.cs" t="Include" />
+          <e p="ReflectionCacheCacheTests.cs" t="Include" />
+        </e>
       </e>
       <e p="packages" t="ExcludeRecursive" />
     </e>

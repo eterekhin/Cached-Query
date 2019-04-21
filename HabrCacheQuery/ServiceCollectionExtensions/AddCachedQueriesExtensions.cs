@@ -1,19 +1,14 @@
 using System;
 using System.Collections.Generic;
 using System.Linq;
-using System.Net.NetworkInformation;
-using System.Reflection;
-using System.Threading.Tasks;
-using HabrCacheQuery.ExampleQuery;
 using HabrCacheQuery.Query;
-using Microsoft.EntityFrameworkCore.Internal;
 using Microsoft.Extensions.DependencyInjection;
 
 namespace HabrCacheQuery.ServiceCollectionExtensions
 {
     public static class AddCachedQueriesExtensions
     {
-        #region predicate
+        #region predicates
 
         private static readonly Func<Type, bool> IsClass = type =>
             type.IsClass && !type.IsAbstract && !type.IsGenericTypeDefinition;
@@ -28,9 +23,9 @@ namespace HabrCacheQuery.ServiceCollectionExtensions
         private static readonly Func<Type, bool> ContainsAsyncQueryInterface =
             destType => GetQueryInterface(typeof(IAsyncQuery<,>), destType) != null;
 
-        private static readonly Func<Type, bool> IsCachedQuery = type =>
+        private static bool IsCachedQuery(Type cacheType, Type type) =>
             GetQueryInterface(typeof(IQuery<,>), type)?.GenericTypeArguments?.FirstOrDefault()?.BaseType ==
-            typeof(CanCacheMySelf);
+            cacheType;
 
         private static readonly Func<Type, (Type dest, Type source)> DestQuerySourceType = type =>
             (type, GetQueryInterface(typeof(IQuery<,>), type));
@@ -53,21 +48,43 @@ namespace HabrCacheQuery.ServiceCollectionExtensions
 
         #endregion
 
-        public static void AddCachedQueries(this IServiceCollection serviceCollection)
+        public static void AddCacheQueryUsingFody(this IServiceCollection serviceCollection)
         {
-            var asyncQueryPredicate = AggregatePredicates(IsClass, IsCachedQuery, ContainsAsyncQueryInterface);
-            
-            var queryInterface = AggregatePredicates(
+            serviceCollection.AddCachedQueries(
+                typeof(CanCacheMySelfUsingFody),
+                typeof(CacheQueryUsingFody<,>),
+                typeof(AsyncCacheQueryUsingFody<,>));
+        }
+
+        public static void AddCacheQueryUsingReflection(this IServiceCollection serviceCollection)
+        {
+            serviceCollection.AddCachedQueries(
+                typeof(CanCacheMySelfUsingReflection),
+                typeof(CacheQueryUsingReflection<,>),
+                typeof(AsyncCacheQueryUsingReflection<,>));
+        }
+
+
+        private static void AddCachedQueries(
+            this IServiceCollection serviceCollection,
+            Type dtoCacheInterface, Type queryCacheType, Type asyncQueryCacheType)
+        {
+            var asyncQueryPredicate = AggregatePredicates(
                 IsClass,
-                IsCachedQuery,
+                x => IsCachedQuery(dtoCacheInterface, x),
+                ContainsAsyncQueryInterface);
+
+            var queryPredicate = AggregatePredicates(
+                IsClass,
+                x => IsCachedQuery(dtoCacheInterface, x),
                 x => !asyncQueryPredicate(x),
                 ContainsQueryInterface);
 
             var asyncQueries = GetAssemblesTypes(asyncQueryPredicate, DestAsyncQuerySourceType);
-            var queries = GetAssemblesTypes(queryInterface, DestQuerySourceType);
+            var queries = GetAssemblesTypes(queryPredicate, DestQuerySourceType);
 
-            serviceCollection.QueryDecorator(asyncQueries, typeof(AsyncCacheQuery<,>));
-            serviceCollection.QueryDecorator(queries, typeof(CacheQuery<,>));
+            serviceCollection.QueryDecorator(asyncQueries, asyncQueryCacheType);
+            serviceCollection.QueryDecorator(queries, queryCacheType);
         }
 
         private static void QueryDecorator(this IServiceCollection serviceCollection,
