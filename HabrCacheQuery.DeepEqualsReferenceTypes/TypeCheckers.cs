@@ -17,5 +17,11 @@ namespace HabrCacheQuery.ServiceCollectionExtensions
         public static readonly Func<Type, bool> EqualsGetHashCodeOverride = type => type
             .GetMethods().Where(x => new[] {nameof(GetHashCode), nameof(Equals)}.Contains(x.Name))
             .Any(x => x.DeclaringType != typeof(object));
+
+        public static readonly Func<Type, bool> IsClass = type =>
+            type.IsClass && !type.IsAbstract && !type.IsGenericTypeDefinition;
+
+        public static readonly Func<Type, bool> IsQuery = type =>
+            type.IsClass && !type.IsAbstract && !type.IsGenericTypeDefinition;
     }
 }

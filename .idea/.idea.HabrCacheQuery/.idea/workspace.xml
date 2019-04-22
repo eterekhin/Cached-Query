@@ -2,39 +2,21 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="767a0ed5-2eab-4798-93ba-0291a9ee3902" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/CacheQueryMediator/CacheQueryMediator.csproj" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/CacheQueryMediator/Controllers/ValuesController.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/CacheQueryMediator/Program.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/CacheQueryMediator/Properties/launchSettings.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/CacheQueryMediator/Startup.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/CacheQueryMediator/appsettings.Development.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/CacheQueryMediator/appsettings.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/HabrCacheQuery.DeepEqualsReferenceTypes/Hash.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/HabrCacheQuery.DeepEqualsReferenceTypes/TypeCheckers.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/HabrCacheQueryInfrastructure/AsyncCachePipelineBehaviour.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/HabrCacheQueryInfrastructure/CacheFactory.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/HabrCacheQueryInfrastructure/FodyWeavers.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/HabrCacheQueryInfrastructure/FodyWeavers.xsd" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/HabrCacheQueryInfrastructure/HabrCacheQueryInfrastructure.csproj" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/HabrCacheQueryInfrastructure/ICacheFactory.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/HabrCacheQueryInfrastructure/Query/CacheQueryWithCacheStrategy.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/HabrCacheQueryTests/Tests/CastleWindsor.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/HabrCacheQueryTests/Tests/MediatorTests.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/HabrCacheQueryTests/Tests/SimpleInjectorCacheTests.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/HabrCacheQueryInfrastructure/CastleCacheInterceptor/CacheInterceptor.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/HabrCacheQueryInfrastructure/SimpleInjectorCache/CacheWithTypeOverrideEqAndGHC.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.HabrCacheQuery/.idea/contentModel.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.HabrCacheQuery/.idea/contentModel.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.HabrCacheQuery/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.HabrCacheQuery/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/HabrCacheQuery.DeepEqualsReferenceTypes/CanCacheMySelfUsingReflection.cs" beforeDir="false" afterPath="$PROJECT_DIR$/HabrCacheQuery.DeepEqualsReferenceTypes/DeepEquals.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/HabrCacheQuery.sln" beforeDir="false" afterPath="$PROJECT_DIR$/HabrCacheQuery.sln" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/HabrCacheQuery.DeepEqualsReferenceTypes/TypeCheckers.cs" beforeDir="false" afterPath="$PROJECT_DIR$/HabrCacheQuery.DeepEqualsReferenceTypes/TypeCheckers.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/HabrCacheQuery/HabrCacheQuery.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/HabrCacheQuery/HabrCacheQuery.csproj" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/HabrCacheQuery/Query/CacheQuery.cs" beforeDir="false" afterPath="$PROJECT_DIR$/HabrCacheQueryInfrastructure/Query/CacheQuery.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/HabrCacheQuery/Query/CanCacheMySelfUsingFody.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/HabrCacheQuery/Query/IQuery.cs" beforeDir="false" afterPath="$PROJECT_DIR$/HabrCacheQueryInfrastructure/Query/IQuery.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/HabrCacheQuery/ServiceCollectionExtensions/AddCachedQueriesExtensions.cs" beforeDir="false" afterPath="$PROJECT_DIR$/HabrCacheQuery/ServiceCollectionExtensions/AddCachedQueriesExtensions.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/HabrCacheQueryInfrastructure/HabrCacheQueryInfrastructure.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/HabrCacheQueryInfrastructure/HabrCacheQueryInfrastructure.csproj" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/HabrCacheQueryTests/BaseCacheTest.cs" beforeDir="false" afterPath="$PROJECT_DIR$/HabrCacheQueryTests/BaseCacheTest.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/HabrCacheQueryTests/ExampleQuery/DelayQuery.cs" beforeDir="false" afterPath="$PROJECT_DIR$/HabrCacheQueryTests/ExampleQuery/DelayQuery.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/HabrCacheQueryTests/HabrCacheQueryTests.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/HabrCacheQueryTests/HabrCacheQueryTests.csproj" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/HabrCacheQueryTests/Tests/CastleWindsor.cs" beforeDir="false" afterPath="$PROJECT_DIR$/HabrCacheQueryTests/Tests/CastleWindsor.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/HabrCacheQueryTests/Tests/FodyCacheCacheTests.cs" beforeDir="false" afterPath="$PROJECT_DIR$/HabrCacheQueryTests/Tests/FodyCacheCacheTests.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/HabrCacheQueryTests/Tests/MediatorTests.cs" beforeDir="false" afterPath="$PROJECT_DIR$/HabrCacheQueryTests/Tests/MediatorTests.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/HabrCacheQueryTests/Tests/ReflectionCacheCacheTests.cs" beforeDir="false" afterPath="$PROJECT_DIR$/HabrCacheQueryTests/Tests/ReflectionCacheCacheTests.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/HabrCacheQueryTests/Tests/SimpleInjectorCacheTests.cs" beforeDir="false" afterPath="$PROJECT_DIR$/HabrCacheQueryTests/Tests/SimpleInjectorCacheTests.cs" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -58,132 +40,139 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/HabrCacheQuery/ServiceCollectionExtensions/AddCachedQueriesExtensions.cs">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="136">
-              <caret line="50" selection-start-line="50" selection-end-line="50" />
-              <folding>
-                <marker date="1555862377941" expanded="false" signature="6:142" ph="..." />
-                <marker date="1555862377941" expanded="true" signature="196:4744" ph="{...}" />
-                <marker date="1555862377941" expanded="true" signature="249:4742" ph="{...}" />
-                <marker date="1555862377941" expanded="false" signature="264:2128" ph="predicates" />
-                <marker date="1555862377941" expanded="true" signature="2216:3534" ph="{...}" />
-                <marker date="1555862377941" expanded="true" signature="2788:3119" ph="{...}" />
-                <marker date="1555862377941" expanded="true" signature="3201:3522" ph="{...}" />
-                <marker date="1555862377941" expanded="true" signature="3816:4143" ph="{...}" />
-                <marker date="1555862377941" expanded="true" signature="4369:4736" ph="{...}" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/HabrCacheQueryTests/Tests/SimpleInjectorCacheTests.cs">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="289">
-              <caret line="17" column="66" selection-start-line="14" selection-start-column="12" selection-end-line="17" selection-end-column="66" />
+            <state relative-caret-position="227">
+              <caret line="61" selection-start-line="61" selection-end-line="61" />
               <folding>
-                <marker date="1555863987356" expanded="true" signature="6:189" ph="..." />
-                <marker date="1555863987356" expanded="true" signature="206:680" ph="{...}" />
-                <marker date="1555863987356" expanded="true" signature="266:678" ph="{...}" />
-                <marker date="1555863987356" expanded="true" signature="330:651" ph="{...}" />
-                <marker date="1555863987356" expanded="true" signature="386:641" ph="/* container.Register(); ... */" />
-                <marker date="1555863987356" expanded="true" signature="652:672" ph="{...}" />
+                <marker date="1555921344031" expanded="true" signature="6:378" ph="..." />
+                <marker date="1555921344031" expanded="true" signature="395:2521" ph="{...}" />
+                <marker date="1555921344031" expanded="true" signature="455:2519" ph="{...}" />
+                <marker date="1555921344031" expanded="true" signature="634:2014" ph="{...}" />
+                <marker date="1555921344031" expanded="true" signature="824:1038" ph="{...}" />
+                <marker date="1555921344031" expanded="true" signature="1161:1353" ph="{...}" />
+                <marker date="1555921344031" expanded="true" signature="2048:2068" ph="{...}" />
+                <marker date="1555921344031" expanded="true" signature="2113:2316" ph="{...}" />
+                <marker date="1555921344031" expanded="true" signature="2186:2306" ph="{...}" />
+                <marker date="1555921344031" expanded="true" signature="2359:2513" ph="{...}" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/005673A8-2FC6-42F3-841F-4C4E95C61545/e0/253d3567/Container.cs">
+        <entry file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/AA66E282-37B2-48FC-B09A-E37525780107/03/e92227c3/Enumerable.cs">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="205">
-              <caret line="1531" column="13" selection-start-line="1531" selection-start-column="13" selection-end-line="1531" selection-end-column="13" />
+            <state relative-caret-position="119">
+              <caret line="8" lean-forward="true" selection-start-line="8" selection-end-line="8" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/005673A8-2FC6-42F3-841F-4C4E95C61545/9c/29766083/Registration.cs">
+        <entry file="file://$USER_HOME$/AppData/Local/Symbols/src/nunit/nunit/4530d6dba175fae6ff8f8ade6c07fd05e6c1c7c5/src/NUnitFramework/framework/Internal/Execution/CompositeWorkItem.cs">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="289">
-              <caret line="33" column="24" selection-start-line="33" selection-start-column="24" selection-end-line="33" selection-end-column="24" />
+            <state relative-caret-position="223">
+              <caret line="263" column="16" selection-start-line="263" selection-start-column="16" selection-end-line="263" selection-end-column="16" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/HabrCacheQuery.DeepEqualsReferenceTypes/TypeCheckers.cs">
+        <entry file="file://$USER_HOME$/AppData/Local/Symbols/src/nunit/nunit/4530d6dba175fae6ff8f8ade6c07fd05e6c1c7c5/src/NUnitFramework/framework/Internal/Reflect.cs">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="68">
-              <caret line="7" column="36" selection-start-line="7" selection-start-column="24" selection-end-line="7" selection-end-column="36" />
+            <state relative-caret-position="189">
+              <caret line="278" column="16" selection-start-line="278" selection-start-column="16" selection-end-line="278" selection-end-column="16" />
               <folding>
-                <marker date="1555857239281" expanded="false" signature="6:92" ph="..." />
-                <marker date="1555857239281" expanded="true" signature="146:885" ph="{...}" />
-                <marker date="1555857239281" expanded="true" signature="185:883" ph="{...}" />
+                <marker date="1550303173179" expanded="true" signature="0:1280" ph="/* Copyright (c) 2007-2018 Charlie Poole, Rob Prouse ... */" />
+                <marker date="1550303173179" expanded="false" signature="1288:1521" ph="..." />
+                <marker date="1550303173179" expanded="true" signature="1557:17410" ph="{...}" />
+                <marker date="1550303173179" expanded="true" signature="1564:2337" ph="/// Helper methods for inspecting a type by reflection. ... " />
+                <marker date="1550303173179" expanded="true" signature="2369:17408" ph="{...}" />
+                <marker date="1550303173179" expanded="false" signature="2700:5698" ph="Get Methods of a type" />
+                <marker date="1550303173179" expanded="true" signature="2739:3236" ph="/// Examine a fixture type and return an array of methods having a ... " />
+                <marker date="1550303173179" expanded="true" signature="3347:3827" ph="{...}" />
+                <marker date="1550303173179" expanded="true" signature="3599:3727" ph="{...}" />
+                <marker date="1550303173179" expanded="true" signature="3897:4299" ph="{...}" />
+                <marker date="1550303173179" expanded="true" signature="3968:4289" ph="{...}" />
+                <marker date="1550303173179" expanded="true" signature="4309:4663" ph="/// Examine a fixture type and return true if it has a method with ... " />
+                <marker date="1550303173179" expanded="true" signature="4751:5678" ph="{...}" />
+                <marker date="1550303173179" expanded="true" signature="4871:5642" ph="{...}" />
+                <marker date="1550303173179" expanded="true" signature="4921:5293" ph="/* For .NET Standard 1.x, MethodInfo.IsDefined resolves to an extension method, ... */" />
+                <marker date="1550303173179" expanded="false" signature="5708:10828" ph="Invoke Constructors" />
+                <marker date="1550303173179" expanded="true" signature="5745:5955" ph="/// Invoke the default constructor on a Type ... " />
+                <marker date="1550303173179" expanded="true" signature="6005:6273" ph="{...}" />
+                <marker date="1550303173179" expanded="true" signature="6283:6571" ph="/// Invoke a constructor on a Type with arguments ... " />
+                <marker date="1550303173179" expanded="true" signature="6641:7047" ph="{...}" />
+                <marker date="1550303173179" expanded="true" signature="7057:7364" ph="/// Returns an array of types from an array of objects. ... " />
+                <marker date="1550303173179" expanded="true" signature="7426:7669" ph="{...}" />
+                <marker date="1550303173179" expanded="true" signature="7558:7633" ph="{...}" />
+                <marker date="1550303173179" expanded="true" signature="7679:7803" ph="/// Gets the constructors to which the specified argument types can be coerced. ... " />
+                <marker date="1550303173179" expanded="true" signature="7905:8063" ph="{...}" />
+                <marker date="1550303173179" expanded="true" signature="8073:8197" ph="/// Determines if the given types can be coerced to match the given parameters. ... " />
+                <marker date="1550303173179" expanded="true" signature="8286:8604" ph="{...}" />
+                <marker date="1550303173179" expanded="true" signature="8427:8569" ph="{...}" />
+                <marker date="1550303173179" expanded="true" signature="8796:9995" ph="{...}" />
+                <marker date="1550303173179" expanded="true" signature="10006:10141" ph="/// Determines whether the current type can be implicitly converted to the specified type. ... " />
+                <marker date="1550303173179" expanded="true" signature="10218:10808" ph="{...}" />
+                <marker date="1550303173179" expanded="true" signature="10838:12737" ph="Invoke Methods" />
+                <marker date="1550303173179" expanded="true" signature="10870:11143" ph="/// Invoke a parameterless method returning void on an object. ... " />
+                <marker date="1550303173179" expanded="true" signature="11220:11296" ph="{...}" />
+                <marker date="1550303173179" expanded="true" signature="11306:11744" ph="/// Invoke a method, converting any TargetInvocationException to an NUnitException. ... " />
+                <marker date="1550303173179" expanded="true" signature="11975:12717" ph="{...}" />
+                <marker date="1550303173179" expanded="true" signature="12017:12681" ph="{...}" />
+                <marker date="1550303173179" expanded="true" signature="12051:12144" ph="{...}" />
+                <marker date="1550303173179" expanded="true" signature="12422:12534" ph="{...}" />
+                <marker date="1550303173179" expanded="true" signature="12570:12667" ph="{...}" />
+                <marker date="1550303173179" expanded="true" signature="12766:13866" ph="/* &lt;para&gt; ... */" />
+                <marker date="1550303173179" expanded="true" signature="13881:14917" ph="/// &lt;para&gt; ... " />
+                <marker date="1550303173179" expanded="true" signature="15039:16764" ph="{...}" />
+                <marker date="1550303173179" expanded="true" signature="15225:15483" ph="{...}" />
+                <marker date="1550303173179" expanded="true" signature="15256:15408" ph="/* If you're asking us to search a hierarchy but only want properties declared in the given type, ... */" />
+                <marker date="1550303173179" expanded="true" signature="15615:16433" ph="{...}" />
+                <marker date="1550303173179" expanded="true" signature="15646:15878" ph="/* If we're searching for both public and nonpublic properties, search for only public first ... */" />
+                <marker date="1550303173179" expanded="true" signature="16015:16251" ph="{...}" />
+                <marker date="1550303173179" expanded="true" signature="16542:16728" ph="{...}" />
+                <marker date="1550303173179" expanded="true" signature="16826:16973" ph="{...}" />
+                <marker date="1550303173179" expanded="true" signature="17024:17402" ph="{...}" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/HabrCacheQueryInfrastructure/Query/CacheQuery.cs">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-378">
-              <caret line="50" column="17" selection-start-line="50" selection-start-column="17" selection-end-line="50" selection-end-column="17" />
-              <folding>
-                <marker date="1555854363048" expanded="false" signature="6:196" ph="..." />
-                <marker date="1555854363048" expanded="true" signature="250:2584" ph="{...}" />
-                <marker date="1555854363048" expanded="true" signature="315:650" ph="{...}" />
-                <marker date="1555854363048" expanded="true" signature="506:554" ph="{...}" />
-                <marker date="1555854363048" expanded="true" signature="745:1033" ph="{...}" />
-                <marker date="1555854363048" expanded="true" signature="1007:1027" ph="{...}" />
-                <marker date="1555854363048" expanded="true" signature="1147:1399" ph="{...}" />
-                <marker date="1555854363048" expanded="true" signature="1373:1393" ph="{...}" />
-                <marker date="1555854363048" expanded="true" signature="1503:1622" ph="{...}" />
-                <marker date="1555854363048" expanded="true" signature="1596:1616" ph="{...}" />
-                <marker date="1555854363048" expanded="true" signature="1722:1819" ph="{...}" />
-                <marker date="1555854363048" expanded="true" signature="1793:1813" ph="{...}" />
-                <marker date="1555854363048" expanded="true" signature="1966:2095" ph="{...}" />
-                <marker date="1555854363048" expanded="true" signature="2069:2089" ph="{...}" />
-                <marker date="1555854363048" expanded="true" signature="2238:2345" ph="{...}" />
-                <marker date="1555854363048" expanded="true" signature="2319:2339" ph="{...}" />
-                <marker date="1555854363048" expanded="true" signature="2428:2582" ph="{...}" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/HabrCacheQueryInfrastructure/Query/CacheQueryWithCacheStrategy.cs">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="102">
-              <caret line="6" column="44" selection-start-line="6" selection-start-column="17" selection-end-line="6" selection-end-column="44" />
-              <folding>
-                <marker date="1555863413902" expanded="true" signature="6:64" ph="..." />
-                <marker date="1555863413902" expanded="true" signature="160:812" ph="{...}" />
-                <marker date="1555863413902" expanded="true" signature="238:810" ph="{...}" />
-                <marker date="1555863413902" expanded="true" signature="428:714" ph="{...}" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/HabrCacheQueryTests/Tests/CastleWindsor.cs">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="351">
-              <caret line="41" column="13" lean-forward="true" selection-start-line="41" selection-start-column="13" selection-end-line="41" selection-end-column="13" />
+            <state relative-caret-position="510">
+              <caret line="52" column="19" lean-forward="true" selection-start-line="52" selection-start-column="19" selection-end-line="52" selection-end-column="19" />
               <folding>
-                <marker date="1555864474440" expanded="true" signature="6:430" ph="..." />
-                <marker date="1555864474440" expanded="true" signature="514:2033" ph="{...}" />
-                <marker date="1555864474440" expanded="true" signature="567:2031" ph="{...}" />
-                <marker date="1555864474440" expanded="true" signature="833:1442" ph="{...}" />
-                <marker date="1555864474440" expanded="true" signature="1443:1463" ph="{...}" />
-                <marker date="1555864474440" expanded="true" signature="1509:1789" ph="{...}" />
-                <marker date="1555864474440" expanded="true" signature="1552:1779" ph="{...}" />
-                <marker date="1555864474440" expanded="true" signature="1840:2025" ph="{...}" />
+                <marker date="1555916532200" expanded="false" signature="6:717" ph="..." />
+                <marker date="1555916532200" expanded="true" signature="734:2465" ph="{...}" />
+                <marker date="1555916532200" expanded="true" signature="787:2463" ph="{...}" />
+                <marker date="1555916532200" expanded="true" signature="1053:1741" ph="{...}" />
+                <marker date="1555916532200" expanded="true" signature="1824:1844" ph="{...}" />
+                <marker date="1555916532200" expanded="true" signature="1890:2210" ph="{...}" />
+                <marker date="1555916532200" expanded="true" signature="1933:2200" ph="{...}" />
+                <marker date="1555916532200" expanded="true" signature="2261:2457" ph="{...}" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/HabrCacheQueryTests/Tests/FodyCacheCacheTests.cs">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="314">
+              <caret line="43" column="28" selection-start-line="43" selection-start-column="28" selection-end-line="43" selection-end-column="28" />
+              <folding>
+                <marker date="1555918408656" expanded="false" signature="6:429" ph="..." />
+                <marker date="1555918408656" expanded="true" signature="446:1585" ph="{...}" />
+                <marker date="1555918408656" expanded="true" signature="520:1583" ph="{...}" />
+                <marker date="1555918408656" expanded="true" signature="570:921" ph="{...}" />
+                <marker date="1555918408656" expanded="true" signature="657:911" ph="{...}" />
+                <marker date="1555918408656" expanded="true" signature="980:1188" ph="{...}" />
+                <marker date="1555918408656" expanded="true" signature="1236:1403" ph="{...}" />
               </folding>
             </state>
           </provider>
@@ -192,17 +181,36 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/HabrCacheQueryTests/BaseCacheTest.cs">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="391">
-              <caret line="45" column="26" selection-start-line="45" selection-start-column="26" selection-end-line="45" selection-end-column="26" />
+            <state relative-caret-position="331">
+              <caret line="54" column="43" selection-start-line="54" selection-start-column="30" selection-end-line="54" selection-end-column="43" />
               <folding>
-                <marker date="1555857996878" expanded="false" signature="6:364" ph="..." />
-                <marker date="1555857996878" expanded="true" signature="381:1861" ph="{...}" />
-                <marker date="1555857996878" expanded="true" signature="449:737" ph="{...}" />
-                <marker date="1555857996878" expanded="true" signature="541:710" ph="{...}" />
-                <marker date="1555857996878" expanded="true" signature="711:731" ph="{...}" />
-                <marker date="1555857996878" expanded="true" signature="769:1859" ph="{...}" />
-                <marker date="1555857996878" expanded="true" signature="1082:1153" ph="{...}" />
-                <marker date="1555857996878" expanded="true" signature="1242:1478" ph="{...}" />
+                <marker date="1555918408678" expanded="false" signature="6:364" ph="..." />
+                <marker date="1555918408678" expanded="true" signature="381:2165" ph="{...}" />
+                <marker date="1555918408678" expanded="true" signature="449:770" ph="{...}" />
+                <marker date="1555918408678" expanded="true" signature="541:710" ph="{...}" />
+                <marker date="1555918408678" expanded="true" signature="744:764" ph="{...}" />
+                <marker date="1555918408678" expanded="true" signature="802:2163" ph="{...}" />
+                <marker date="1555918408678" expanded="true" signature="1274:1407" ph="{...}" />
+                <marker date="1555918408678" expanded="true" signature="1496:1734" ph="{...}" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/HabrCacheQueryInfrastructure/SimpleInjectorCache/CacheWithTypeOverrideEqAndGHC.cs">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="314">
+              <caret line="27" column="13" selection-start-line="27" selection-start-column="13" selection-end-line="27" selection-end-column="13" />
+              <folding>
+                <marker date="1555918489045" expanded="true" signature="6:114" ph="..." />
+                <marker date="1555918489045" expanded="true" signature="164:1214" ph="{...}" />
+                <marker date="1555918489045" expanded="true" signature="247:414" ph="{...}" />
+                <marker date="1555918489045" expanded="true" signature="388:408" ph="{...}" />
+                <marker date="1555918489045" expanded="true" signature="484:681" ph="{...}" />
+                <marker date="1555918489045" expanded="true" signature="655:675" ph="{...}" />
+                <marker date="1555918489045" expanded="true" signature="749:1212" ph="{...}" />
+                <marker date="1555918489045" expanded="true" signature="994:1100" ph="{...}" />
               </folding>
             </state>
           </provider>
@@ -211,32 +219,56 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/HabrCacheQueryTests/Tests/ReflectionCacheCacheTests.cs">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-170">
-              <caret line="32" column="35" selection-start-line="32" selection-start-column="17" selection-end-line="32" selection-end-column="35" />
+            <state relative-caret-position="331">
+              <caret line="108" selection-start-line="108" selection-end-line="108" />
               <folding>
-                <marker date="1555857996908" expanded="false" signature="6:286" ph="..." />
-                <marker date="1555857996908" expanded="true" signature="303:5088" ph="{...}" />
-                <marker date="1555857996908" expanded="true" signature="310:1786" ph="stab" />
-                <marker date="1555857996908" expanded="true" signature="374:617" ph="{...}" />
-                <marker date="1555857996908" expanded="true" signature="479:537" ph="{...}" />
-                <marker date="1555857996908" expanded="true" signature="639:688" ph="{...}" />
-                <marker date="1555857996908" expanded="true" signature="725:937" ph="{...}" />
-                <marker date="1555857996908" expanded="true" signature="1019:1292" ph="{...}" />
-                <marker date="1555857996908" expanded="true" signature="1139:1197" ph="{...}" />
-                <marker date="1555857996908" expanded="true" signature="1323:1439" ph="{...}" />
-                <marker date="1555857996908" expanded="true" signature="1509:1770" ph="{...}" />
-                <marker date="1555857996908" expanded="true" signature="1623:1681" ph="{...}" />
-                <marker date="1555857996908" expanded="true" signature="1865:5086" ph="{...}" />
-                <marker date="1555857996908" expanded="true" signature="2147:2587" ph="{...}" />
-                <marker date="1555857996908" expanded="true" signature="2249:2577" ph="{...}" />
-                <marker date="1555857996908" expanded="true" signature="2631:2869" ph="{...}" />
-                <marker date="1555857996908" expanded="true" signature="2913:3157" ph="{...}" />
-                <marker date="1555857996908" expanded="true" signature="3201:3421" ph="{...}" />
-                <marker date="1555857996908" expanded="true" signature="3465:3783" ph="{...}" />
-                <marker date="1555857996908" expanded="true" signature="3827:4029" ph="{...}" />
-                <marker date="1555857996908" expanded="true" signature="4074:4439" ph="{...}" />
-                <marker date="1555857996908" expanded="true" signature="4499:4919" ph="{...}" />
-                <marker date="1555857996908" expanded="true" signature="4967:5080" ph="{...}" />
+                <marker date="1555918408666" expanded="false" signature="6:286" ph="..." />
+                <marker date="1555918408666" expanded="true" signature="303:4818" ph="{...}" />
+                <marker date="1555918408666" expanded="true" signature="310:1786" ph="stab" />
+                <marker date="1555918408666" expanded="true" signature="374:617" ph="{...}" />
+                <marker date="1555918408666" expanded="true" signature="479:537" ph="{...}" />
+                <marker date="1555918408666" expanded="true" signature="639:688" ph="{...}" />
+                <marker date="1555918408666" expanded="true" signature="725:937" ph="{...}" />
+                <marker date="1555918408666" expanded="true" signature="1019:1292" ph="{...}" />
+                <marker date="1555918408666" expanded="true" signature="1139:1197" ph="{...}" />
+                <marker date="1555918408666" expanded="true" signature="1323:1439" ph="{...}" />
+                <marker date="1555918408666" expanded="true" signature="1509:1770" ph="{...}" />
+                <marker date="1555918408666" expanded="true" signature="1623:1681" ph="{...}" />
+                <marker date="1555918408666" expanded="true" signature="1865:4816" ph="{...}" />
+                <marker date="1555918408666" expanded="true" signature="2147:2587" ph="{...}" />
+                <marker date="1555918408666" expanded="true" signature="2249:2577" ph="{...}" />
+                <marker date="1555918408666" expanded="true" signature="2631:2828" ph="{...}" />
+                <marker date="1555918408666" expanded="true" signature="2872:3069" ph="{...}" />
+                <marker date="1555918408666" expanded="true" signature="3113:3292" ph="{...}" />
+                <marker date="1555918408666" expanded="true" signature="3336:3607" ph="{...}" />
+                <marker date="1555918408666" expanded="true" signature="3651:3806" ph="{...}" />
+                <marker date="1555918408666" expanded="true" signature="3851:4169" ph="{...}" />
+                <marker date="1555918408666" expanded="true" signature="4229:4649" ph="{...}" />
+                <marker date="1555918408666" expanded="true" signature="4697:4810" ph="{...}" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/HabrCacheQueryTests/Tests/MediatorTests.cs">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="34">
+              <caret line="42" column="36" selection-start-line="42" selection-start-column="36" selection-end-line="42" selection-end-column="36" />
+              <folding>
+                <marker date="1555901940611" expanded="false" signature="6:214" ph="..." />
+                <marker date="1555901940611" expanded="true" signature="231:1745" ph="{...}" />
+                <marker date="1555901940611" expanded="true" signature="303:315" ph="{...}" />
+                <marker date="1555901940611" expanded="true" signature="354:366" ph="{...}" />
+                <marker date="1555901940611" expanded="true" signature="471:790" ph="{...}" />
+                <marker date="1555901940611" expanded="true" signature="520:540" ph="{...}" />
+                <marker date="1555901940611" expanded="true" signature="662:784" ph="{...}" />
+                <marker date="1555901940611" expanded="true" signature="838:1743" ph="{...}" />
+                <marker date="1555901940611" expanded="true" signature="938:1212" ph="{...}" />
+                <marker date="1555901940611" expanded="true" signature="1241:1261" ph="{...}" />
+                <marker date="1555901940611" expanded="true" signature="1320:1482" ph="{...}" />
+                <marker date="1555901940611" expanded="true" signature="1363:1472" ph="{...}" />
+                <marker date="1555901940611" expanded="true" signature="1544:1737" ph="{...}" />
               </folding>
             </state>
           </provider>
@@ -255,8 +287,9 @@
       <find>AddScoped</find>
       <find>EqualityComparerUsingReflection</find>
       <find>IMessageValidator</find>
-      <find>RegisterConditional</find>
       <find>For&lt;IQuery&lt;Dto, Something&gt;</find>
+      <find>RegisterCon</find>
+      <find>RegisterConditional</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -279,6 +312,7 @@
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/9DE46E3C-963E-4872-8A29-95FD027553CC/8d/bbc9dbaa/AssemblyInformationalVersionAttribute.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/CacheQueryMediator/Controllers/ValuesController.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/AA66E282-37B2-48FC-B09A-E37525780107/c6/4093eec3/Utilities.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/AA66E282-37B2-48FC-B09A-E37525780107/03/e92227c3/Enumerable.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/15782559-B649-400E-9D1C-FE8065BB09FC/ae/893b1185/ConcurrentDictionary`2.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/CacheQueryMediator/Program.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$USER_HOME$/AppData/Local/Symbols/src/nunit/nunit/4530d6dba175fae6ff8f8ade6c07fd05e6c1c7c5/src/NUnitFramework/framework/Internal/Execution/CompositeWorkItem.cs" root0="SKIP_HIGHLIGHTING" />
@@ -299,6 +333,7 @@
     <setting file="file://$PROJECT_DIR$/HabrCacheQuery/Program.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/83CE78FD-F0AE-48FC-B739-03E2539736DE/3a/780437e2/ConfigurationBuilder.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/HabrCacheQueryTests/Tests/ReflectionCacheCacheTests.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/HabrCacheQueryInfrastructure/SimpleInjectorCache/CacheWithTypeOverrideEqAndGHC.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/HabrCacheQuery.DeepEqualsReferenceTypes/TypeCheckers.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/HabrCacheQuery/Startup.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/790C046D-3FEA-47D8-A082-BBCABBD0F621/4b/0bd6a5b6/ServiceCollectionExtensions.cs" root0="SKIP_HIGHLIGHTING" />
@@ -306,6 +341,7 @@
     <setting file="file://$PROJECT_DIR$/HabrCacheQuery.DeepEqualsReferenceTypes/Hash.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/UnitTests/Tests.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/9DE46E3C-963E-4872-8A29-95FD027553CC/bb/3af34697/TypeCode.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/HabrCacheQueryInfrastructure/CastleCacheInterceptor/CacheInterceptor.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/TestProject1/UnitTest1.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/9DE46E3C-963E-4872-8A29-95FD027553CC/a5/b984358d/Boolean.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/005673A8-2FC6-42F3-841F-4C4E95C61545/9c/29766083/Registration.cs" root0="SKIP_HIGHLIGHTING" />
@@ -350,7 +386,6 @@
         <option value="$PROJECT_DIR$/HabrCacheQueryTests/UnitTest1.cs" />
         <option value="$PROJECT_DIR$/HabrCacheQueryTests/FodyCacheTests.cs" />
         <option value="$PROJECT_DIR$/HabrCacheQueryTests/Tests/ReflectionCacheTests.cs" />
-        <option value="$PROJECT_DIR$/HabrCacheQuery/Startup.cs" />
         <option value="$PROJECT_DIR$/HabrCacheQuery/Query/CanCacheMySelfUsingReflection.cs" />
         <option value="$PROJECT_DIR$/HabrCacheQuery.DeepEqualsReferenceTypes/Class1.cs" />
         <option value="$PROJECT_DIR$/HabrCacheQuery.DeepEqualsReferenceTypes/CanCacheMySelfUsingReflection.cs" />
@@ -358,21 +393,24 @@
         <option value="$PROJECT_DIR$/HabrCacheQuery.DeepEqualsReferenceTypes/DeepEquals.cs" />
         <option value="$PROJECT_DIR$/HabrCacheQueryInfrastructure/Class1.cs" />
         <option value="$PROJECT_DIR$/HabrCacheQueryTests/ExampleQuery/DelayQuery.cs" />
-        <option value="$PROJECT_DIR$/HabrCacheQuery.DeepEqualsReferenceTypes/TypeCheckers.cs" />
         <option value="$PROJECT_DIR$/HabrCacheQueryInfrastructure/Query/CacheQuery.cs" />
         <option value="$PROJECT_DIR$/CacheQueryMediator/Controllers/ValuesController.cs" />
-        <option value="$PROJECT_DIR$/HabrCacheQueryTests/BaseCacheTest.cs" />
-        <option value="$PROJECT_DIR$/HabrCacheQueryTests/Tests/ReflectionCacheCacheTests.cs" />
-        <option value="$PROJECT_DIR$/HabrCacheQueryTests/Tests/FodyCacheCacheTests.cs" />
         <option value="$PROJECT_DIR$/CacheQueryMediator/Startup.cs" />
-        <option value="$PROJECT_DIR$/HabrCacheQueryTests/Tests/MediatorTests.cs" />
         <option value="$PROJECT_DIR$/HabrCacheQueryInfrastructure/CachePipelineBehaviour.cs" />
         <option value="$PROJECT_DIR$/HabrCacheQueryInfrastructure/ASyncCachePipelineBehaviour.cs" />
         <option value="$PROJECT_DIR$/HabrCacheQueryInfrastructure/AsyncCachePipelineBehaviour.cs" />
-        <option value="$PROJECT_DIR$/HabrCacheQuery/ServiceCollectionExtensions/AddCachedQueriesExtensions.cs" />
         <option value="$PROJECT_DIR$/HabrCacheQueryInfrastructure/Query/CacheQueryWithCacheStrategy.cs" />
-        <option value="$PROJECT_DIR$/HabrCacheQueryTests/Tests/SimpleInjectorCacheTests.cs" />
+        <option value="$PROJECT_DIR$/HabrCacheQuery/Startup.cs" />
+        <option value="$PROJECT_DIR$/HabrCacheQueryTests/Tests/MediatorTests.cs" />
+        <option value="$PROJECT_DIR$/HabrCacheQuery/ServiceCollectionExtensions/AddCachedQueriesExtensions.cs" />
+        <option value="$PROJECT_DIR$/HabrCacheQuery.DeepEqualsReferenceTypes/TypeCheckers.cs" />
+        <option value="$PROJECT_DIR$/HabrCacheQueryInfrastructure/CastleCacheInterceptor/CacheInterceptor.cs" />
         <option value="$PROJECT_DIR$/HabrCacheQueryTests/Tests/CastleWindsor.cs" />
+        <option value="$PROJECT_DIR$/HabrCacheQueryTests/BaseCacheTest.cs" />
+        <option value="$PROJECT_DIR$/HabrCacheQueryTests/Tests/FodyCacheCacheTests.cs" />
+        <option value="$PROJECT_DIR$/HabrCacheQueryTests/Tests/ReflectionCacheCacheTests.cs" />
+        <option value="$PROJECT_DIR$/HabrCacheQueryInfrastructure/SimpleInjectorCache/CacheWithTypeOverrideEqAndGHC.cs" />
+        <option value="$PROJECT_DIR$/HabrCacheQueryTests/Tests/SimpleInjectorCacheTests.cs" />
       </list>
     </option>
   </component>
@@ -390,6 +428,7 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="FileSystemExplorer" />
       <pane id="SolutionExplorer">
         <subPane>
           <expand>
@@ -405,18 +444,18 @@
             <path>
               <item name="Project" type="784c90a0:SolutionExplorerRootNode" />
               <item name="HabrCacheQuery" type="24d0babc:SolutionExplorerModelNode" />
+              <item name="HabrCacheQuery" type="24d0babc:SolutionExplorerModelNode" />
+              <item name="ServiceCollectionExtensions" type="24d0babc:SolutionExplorerModelNode" />
+            </path>
+            <path>
+              <item name="Project" type="784c90a0:SolutionExplorerRootNode" />
+              <item name="HabrCacheQuery" type="24d0babc:SolutionExplorerModelNode" />
               <item name="HabrCacheQuery.DeepEqualsReferenceTypes" type="24d0babc:SolutionExplorerModelNode" />
             </path>
             <path>
               <item name="Project" type="784c90a0:SolutionExplorerRootNode" />
               <item name="HabrCacheQuery" type="24d0babc:SolutionExplorerModelNode" />
               <item name="HabrCacheQueryInfrastructure" type="24d0babc:SolutionExplorerModelNode" />
-            </path>
-            <path>
-              <item name="Project" type="784c90a0:SolutionExplorerRootNode" />
-              <item name="HabrCacheQuery" type="24d0babc:SolutionExplorerModelNode" />
-              <item name="HabrCacheQueryInfrastructure" type="24d0babc:SolutionExplorerModelNode" />
-              <item name="Query" type="24d0babc:SolutionExplorerModelNode" />
             </path>
             <path>
               <item name="Project" type="784c90a0:SolutionExplorerRootNode" />
@@ -434,7 +473,6 @@
         </subPane>
         <option name="show-all-files" value="false" />
       </pane>
-      <pane id="FileSystemExplorer" />
       <pane id="AssemblyExplorer">
         <subPane>
           <expand>
@@ -498,6 +536,7 @@
       <updated>1555745783740</updated>
       <workItem from="1555745785703" duration="26004000" />
       <workItem from="1555817619965" duration="41993000" />
+      <workItem from="1555900735456" duration="12893000" />
     </task>
     <task id="LOCAL-00001" summary=".">
       <created>1555845612648</created>
@@ -517,7 +556,7 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="67997000" />
+    <option name="totallyTimeSpent" value="80890000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -532,7 +571,7 @@
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.25266525" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.2553305" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Image Layers" order="2" />
       <window_info id="Capture Tool" order="3" />
@@ -546,13 +585,13 @@
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" />
       <window_info anchor="bottom" id="Build" order="7" weight="0.32936078" />
-      <window_info anchor="bottom" id="REST Client" order="8" />
+      <window_info anchor="bottom" id="REST Client" order="8" weight="0.32936078" />
       <window_info anchor="bottom" id="Terminal" order="9" weight="0.32936078" />
       <window_info anchor="bottom" id="Docker" order="10" show_stripe_button="false" />
       <window_info anchor="bottom" id="Performance Profiler" order="11" weight="0.32936078" />
       <window_info anchor="bottom" id="Event Log" order="12" side_tool="true" />
       <window_info anchor="bottom" id="NuGet" order="13" weight="0.32936078" />
-      <window_info anchor="bottom" id="Unit Tests" order="14" weight="0.3261105" />
+      <window_info anchor="bottom" id="Unit Tests" order="14" weight="0.38678223" />
       <window_info anchor="bottom" id="Database Changes" order="15" />
       <window_info anchor="bottom" id="Version Control" order="16" weight="0.32936078" />
       <window_info anchor="bottom" id="Azure Activity Log" order="17" weight="0.32936078" />
@@ -597,19 +636,6 @@
         </line-breakpoint>
         <line-breakpoint enabled="true" type="DotNet Breakpoints">
           <url>file://$PROJECT_DIR$/HabrCacheQueryTests/Tests/FodyCacheCacheTests.cs</url>
-          <line>52</line>
-          <properties documentPath="$PROJECT_DIR$/HabrCacheQueryTests/UnitTest1.cs" initialLine="50">
-            <startOffsets>
-              <option value="1569" />
-            </startOffsets>
-            <endOffsets>
-              <option value="1570" />
-            </endOffsets>
-          </properties>
-          <option name="timeStamp" value="55" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="DotNet Breakpoints">
-          <url>file://$PROJECT_DIR$/HabrCacheQueryTests/Tests/FodyCacheCacheTests.cs</url>
           <line>23</line>
           <properties documentPath="$PROJECT_DIR$/HabrCacheQueryTests/Tests/FodyCacheCacheTests.cs" initialLine="23">
             <startOffsets>
@@ -635,127 +661,87 @@
           <option name="timeStamp" value="89" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="DotNet Breakpoints">
-          <url>file://$PROJECT_DIR$/HabrCacheQueryTests/Tests/CastleWindsor.cs</url>
-          <line>42</line>
-          <properties documentPath="$PROJECT_DIR$/HabrCacheQueryTests/Tests/CastleWindsor.cs" initialLine="39">
+          <url>file://$PROJECT_DIR$/HabrCacheQueryTests/Tests/ReflectionCacheCacheTests.cs</url>
+          <line>24</line>
+          <properties documentPath="$PROJECT_DIR$/HabrCacheQueryTests/Tests/ReflectionCacheCacheTests.cs" initialLine="24">
             <startOffsets>
-              <option value="1583" />
+              <option value="584" />
             </startOffsets>
             <endOffsets>
-              <option value="1658" />
+              <option value="610" />
             </endOffsets>
           </properties>
-          <option name="timeStamp" value="93" />
+          <option name="timeStamp" value="96" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="DotNet Breakpoints">
+          <url>file://$PROJECT_DIR$/HabrCacheQueryTests/Tests/CastleWindsor.cs</url>
+          <line>61</line>
+          <properties documentPath="$PROJECT_DIR$/HabrCacheQueryTests/Tests/CastleWindsor.cs" initialLine="55">
+            <startOffsets>
+              <option value="2328" />
+            </startOffsets>
+            <endOffsets>
+              <option value="2346" />
+            </endOffsets>
+          </properties>
+          <option name="timeStamp" value="97" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="DotNet Breakpoints">
+          <url>file://$PROJECT_DIR$/HabrCacheQueryTests/Tests/CastleWindsor.cs</url>
+          <line>52</line>
+          <properties documentPath="$PROJECT_DIR$/HabrCacheQueryTests/Tests/CastleWindsor.cs" initialLine="47">
+            <startOffsets>
+              <option value="2004" />
+            </startOffsets>
+            <endOffsets>
+              <option value="2079" />
+            </endOffsets>
+          </properties>
+          <option name="timeStamp" value="99" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="DotNet Breakpoints">
+          <url>file://$PROJECT_DIR$/HabrCacheQueryInfrastructure/CastleCacheInterceptor/CacheInterceptor.cs</url>
+          <line>36</line>
+          <properties documentPath="$PROJECT_DIR$/HabrCacheQueryInfrastructure/CastleCacheInterceptor/CacheInterceptor.cs" initialLine="61">
+            <startOffsets>
+              <option value="1142" />
+            </startOffsets>
+            <endOffsets>
+              <option value="1190" />
+            </endOffsets>
+          </properties>
+          <option name="timeStamp" value="105" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="DotNet Breakpoints">
+          <url>file://$PROJECT_DIR$/HabrCacheQueryTests/Tests/SimpleInjectorCacheTests.cs</url>
+          <line>62</line>
+          <properties documentPath="$PROJECT_DIR$/HabrCacheQueryTests/Tests/SimpleInjectorCacheTests.cs" initialLine="44">
+            <startOffsets>
+              <option value="2217" />
+            </startOffsets>
+            <endOffsets>
+              <option value="2292" />
+            </endOffsets>
+          </properties>
+          <option name="timeStamp" value="106" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="DotNet Breakpoints">
+          <url>file://$PROJECT_DIR$/HabrCacheQueryTests/Tests/SimpleInjectorCacheTests.cs</url>
+          <line>39</line>
+          <properties documentPath="$PROJECT_DIR$/HabrCacheQueryTests/Tests/SimpleInjectorCacheTests.cs" initialLine="39">
+            <startOffsets>
+              <option value="1367" />
+            </startOffsets>
+            <endOffsets>
+              <option value="1590" />
+            </endOffsets>
+          </properties>
+          <option name="timeStamp" value="112" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/HabrCacheQuery/HabrCacheQuery.csproj">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="221">
-          <caret line="13" lean-forward="true" selection-start-line="13" selection-end-line="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/5F9D42B7-D86D-46FB-BFB4-793817F7E581/1F/Mock.Generic.cs">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="319">
-          <caret line="201" column="9" lean-forward="true" selection-start-line="201" selection-start-column="9" selection-end-line="201" selection-end-column="9" />
-          <folding>
-            <marker date="1555819546509" expanded="true" signature="0:161" ph="/* Copyright (c) 2007, Clarius Consulting, Manas Technology Solutions, InSTEDD. ... */" />
-            <marker date="1555819546509" expanded="false" signature="169:464" ph="..." />
-            <marker date="1555819546509" expanded="true" signature="479:23055" ph="{...}" />
-            <marker date="1555819546509" expanded="true" signature="619:23053" ph="{...}" />
-            <marker date="1555819546509" expanded="true" signature="726:910" ph="{...}" />
-            <marker date="1555819546509" expanded="false" signature="1369:4470" ph="Ctors" />
-            <marker date="1555819546509" expanded="true" signature="1386:1464" ph="/// Ctor invoked by AsTInterface exclusively. ... " />
-            <marker date="1555819546509" expanded="true" signature="1603:1971" ph="{...}" />
-            <marker date="1555819546509" expanded="true" signature="1611:1967" ph="/* HACK: this is quick hackish. ... */" />
-            <marker date="1555819546509" expanded="true" signature="2194:2202" ph="{...}" />
-            <marker date="1555819546509" expanded="true" signature="2687:2695" ph="{...}" />
-            <marker date="1555819546509" expanded="true" signature="2954:2962" ph="{...}" />
-            <marker date="1555819546509" expanded="true" signature="3217:3817" ph="{...}" />
-            <marker date="1555819546509" expanded="true" signature="3273:3317" ph="{...}" />
-            <marker date="1555819546509" expanded="true" signature="3872:4107" ph="{...}" />
-            <marker date="1555819546509" expanded="true" signature="4141:4458" ph="{...}" />
-            <marker date="1555819546509" expanded="true" signature="4190:4454" ph="{...}" />
-            <marker date="1555819546509" expanded="true" signature="4226:4322" ph="{...}" />
-            <marker date="1555819546509" expanded="true" signature="4354:4449" ph="{...}" />
-            <marker date="1555819546509" expanded="true" signature="4472:8222" ph="Properties" />
-            <marker date="1555819546509" expanded="true" signature="4730:4997" ph="{...}" />
-            <marker date="1555819546509" expanded="true" signature="4766:4993" ph="{...}" />
-            <marker date="1555819546509" expanded="true" signature="4818:4960" ph="{...}" />
-            <marker date="1555819546509" expanded="true" signature="5185:5373" ph="/// Gets or sets the &lt;see cref=&quot;DefaultValueProvider&quot;/&gt; instance that will be used ... " />
-            <marker date="1555819546509" expanded="true" signature="5433:5573" ph="{...}" />
-            <marker date="1555819546509" expanded="true" signature="6410:6452" ph="{...}" />
-            <marker date="1555819546509" expanded="true" signature="6555:6613" ph="{...}" />
-            <marker date="1555819546509" expanded="true" signature="6735:6764" ph="{...}" />
-            <marker date="1555819546509" expanded="true" signature="6801:7278" ph="{...}" />
-            <marker date="1555819546509" expanded="true" signature="7282:7351" ph="/// Returns the mocked object value. ... " />
-            <marker date="1555819546509" expanded="true" signature="7570:7675" ph="{...}" />
-            <marker date="1555819546509" expanded="true" signature="7604:7645" ph="{...}" />
-            <marker date="1555819546509" expanded="true" signature="7712:7749" ph="{...}" />
-            <marker date="1555819546509" expanded="true" signature="7944:8108" ph="/// A set of switches that influence how this mock will operate. ... " />
-            <marker date="1555819546509" expanded="true" signature="8144:8210" ph="{...}" />
-            <marker date="1555819546509" expanded="false" signature="8224:12704" ph="Setup" />
-            <marker date="1555819546509" expanded="true" signature="8498:8598" ph="{...}" />
-            <marker date="1555819546509" expanded="true" signature="8893:9005" ph="{...}" />
-            <marker date="1555819546509" expanded="true" signature="9309:9426" ph="{...}" />
-            <marker date="1555819546509" expanded="true" signature="9607:9918" ph="{...}" />
-            <marker date="1555819546509" expanded="true" signature="10060:10358" ph="{...}" />
-            <marker date="1555819546509" expanded="true" signature="10831:10899" ph="{...}" />
-            <marker date="1555819546509" expanded="true" signature="11416:11697" ph="{...}" />
-            <marker date="1555819546509" expanded="true" signature="11831:11884" ph="{...}" />
-            <marker date="1555819546509" expanded="true" signature="11888:11968" ph="/// Return a sequence of values, once per call. ... " />
-            <marker date="1555819546509" expanded="true" signature="12192:12304" ph="{...}" />
-            <marker date="1555819546509" expanded="true" signature="12308:12390" ph="/// Performs a sequence of actions, one per call. ... " />
-            <marker date="1555819546509" expanded="true" signature="12589:12692" ph="{...}" />
-            <marker date="1555819546509" expanded="false" signature="12706:12942" ph="When" />
-            <marker date="1555819546509" expanded="true" signature="12861:12930" ph="{...}" />
-            <marker date="1555819546509" expanded="false" signature="12944:22303" ph="Verify" />
-            <marker date="1555819546509" expanded="true" signature="13228:13297" ph="{...}" />
-            <marker date="1555819546509" expanded="true" signature="13586:13641" ph="{...}" />
-            <marker date="1555819546509" expanded="true" signature="13936:13976" ph="{...}" />
-            <marker date="1555819546509" expanded="true" signature="14278:14354" ph="{...}" />
-            <marker date="1555819546509" expanded="true" signature="14675:14737" ph="{...}" />
-            <marker date="1555819546509" expanded="true" signature="15064:15128" ph="{...}" />
-            <marker date="1555819546509" expanded="true" signature="15423:15492" ph="{...}" />
-            <marker date="1555819546509" expanded="true" signature="15806:15861" ph="{...}" />
-            <marker date="1555819546509" expanded="true" signature="16181:16238" ph="{...}" />
-            <marker date="1555819546509" expanded="true" signature="16565:16641" ph="{...}" />
-            <marker date="1555819546509" expanded="true" signature="16987:17049" ph="{...}" />
-            <marker date="1555819546509" expanded="true" signature="17345:17417" ph="{...}" />
-            <marker date="1555819546509" expanded="true" signature="17732:17790" ph="{...}" />
-            <marker date="1555819546509" expanded="true" signature="18111:18166" ph="{...}" />
-            <marker date="1555819546509" expanded="true" signature="18494:18573" ph="{...}" />
-            <marker date="1555819546509" expanded="true" signature="18920:18985" ph="{...}" />
-            <marker date="1555819546509" expanded="true" signature="19338:19400" ph="{...}" />
-            <marker date="1555819546509" expanded="true" signature="19551:19807" ph="{...}" />
-            <marker date="1555819546509" expanded="true" signature="19977:20219" ph="{...}" />
-            <marker date="1555819546509" expanded="true" signature="20395:20639" ph="{...}" />
-            <marker date="1555819546509" expanded="true" signature="20822:21085" ph="{...}" />
-            <marker date="1555819546509" expanded="true" signature="21287:21536" ph="{...}" />
-            <marker date="1555819546509" expanded="true" signature="21744:21996" ph="{...}" />
-            <marker date="1555819546509" expanded="true" signature="22000:22214" ph="/// Verifies that there were no calls other than those already verified. ... " />
-            <marker date="1555819546509" expanded="true" signature="22249:22291" ph="{...}" />
-            <marker date="1555819546509" expanded="false" signature="22305:23050" ph="Raise" />
-            <marker date="1555819546509" expanded="true" signature="22600:22687" ph="{...}" />
-            <marker date="1555819546509" expanded="true" signature="22981:23038" ph="{...}" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/HabrCacheQuery/Properties/launchSettings.json">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="170">
-          <caret line="10" column="15" selection-start-line="10" selection-start-column="15" selection-end-line="10" selection-end-column="15" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/HabrCacheQuery/appsettings.json">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
     <entry file="file://$USER_HOME$/.nuget/packages/fody/4.1.0/build/Fody.targets">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="257">
@@ -763,13 +749,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/HabrCacheQueryTests/FodyWeavers.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="51">
-          <caret line="3" column="10" selection-start-line="3" selection-start-column="10" selection-end-line="3" selection-end-column="10" />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/HabrCacheQueryTests/FodyWeavers.xml" />
     <entry file="file://$PROJECT_DIR$/HabrCacheQueryTests/HabrCacheQueryTests.csproj">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="119">
@@ -818,13 +798,6 @@
     <entry file="file://$USER_HOME$/.Rider2018.3/system/log/UnitTestLogs/0a65f854-98dc-4743-bebb-5ea71913a1e0___2019-04-21-13-27-04-199.log">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
-    <entry file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/15782559-B649-400E-9D1C-FE8065BB09FC/ae/893b1185/ConcurrentDictionary`2.cs">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="646">
-          <caret line="65" column="11" selection-start-line="65" selection-start-column="11" selection-end-line="65" selection-end-column="11" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/9DE46E3C-963E-4872-8A29-95FD027553CC/25/8d1e3374/IEqualityComparer`1.cs">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="187">
@@ -832,10 +805,471 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/HabrCacheQuery/Controllers/ValuesController.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="85">
+          <caret line="10" column="17" selection-start-line="10" selection-start-column="17" selection-end-line="10" selection-end-column="17" />
+          <folding>
+            <marker date="1555745809947" expanded="false" signature="6:128" ph="..." />
+            <marker date="1555745809947" expanded="true" signature="166:974" ph="{...}" />
+            <marker date="1555745809947" expanded="true" signature="271:972" ph="{...}" />
+            <marker date="1555745809947" expanded="true" signature="376:450" ph="{...}" />
+            <marker date="1555745809947" expanded="true" signature="553:601" ph="{...}" />
+            <marker date="1555745809947" expanded="true" signature="698:718" ph="{...}" />
+            <marker date="1555745809947" expanded="true" signature="830:850" ph="{...}" />
+            <marker date="1555745809947" expanded="true" signature="946:966" ph="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/HabrCacheQuery.DeepEqualsReferenceTypes/Class1.cs" />
+    <entry file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/790C046D-3FEA-47D8-A082-BBCABBD0F621/4b/0bd6a5b6/ServiceCollectionExtensions.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="323">
+          <caret line="130" column="35" selection-start-line="130" selection-start-column="35" selection-end-line="130" selection-end-column="35" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/CacheQueryMediator/appsettings.Development.json">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/32C7DA0B-DE3E-4433-B1FA-3A6000248638/7d/28515fbb/ServiceCollectionServiceExtensions.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="333">
+          <caret line="185" column="44" selection-start-line="185" selection-start-column="44" selection-end-line="185" selection-end-column="44" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/HabrCacheQueryInfrastructure/Class1.cs" />
+    <entry file="file://$PROJECT_DIR$/HabrCacheQueryInfrastructure/Query/IQuery.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="102">
+          <caret line="6" column="13" selection-start-line="6" selection-start-column="13" selection-end-line="6" selection-end-column="13" />
+          <folding>
+            <marker date="1555752655668" expanded="true" signature="61:230" ph="{...}" />
+            <marker date="1555752655668" expanded="true" signature="102:145" ph="{...}" />
+            <marker date="1555752655668" expanded="true" signature="216:228" ph="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/HabrCacheQueryInfrastructure/Query/CanCacheMySelfUsingFody.cs" />
+    <entry file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/E639C1F9-3A20-4A8D-8F59-EBCD8F7FB8D6/3a/6ffb5950/RequestHandlerDelegate`1.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="170">
+          <caret line="10" column="34" selection-start-line="10" selection-start-column="34" selection-end-line="10" selection-end-column="34" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/CacheQueryMediator/Program.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="68">
+          <caret line="12" column="17" selection-start-line="12" selection-start-column="17" selection-end-line="12" selection-end-column="17" />
+          <folding>
+            <marker date="1555854748410" expanded="false" signature="6:255" ph="..." />
+            <marker date="1555854748410" expanded="true" signature="285:612" ph="{...}" />
+            <marker date="1555854748410" expanded="true" signature="312:610" ph="{...}" />
+            <marker date="1555854748410" expanded="true" signature="365:439" ph="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/CacheQueryMediator/Controllers/ValuesController.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="136">
+          <caret line="13" selection-start-line="13" selection-end-line="13" />
+          <folding>
+            <marker date="1555857769351" expanded="false" signature="6:143" ph="..." />
+            <marker date="1555857769351" expanded="true" signature="185:819" ph="{...}" />
+            <marker date="1555857769351" expanded="true" signature="290:817" ph="{...}" />
+            <marker date="1555857769351" expanded="true" signature="398:446" ph="{...}" />
+            <marker date="1555857769351" expanded="true" signature="543:563" ph="{...}" />
+            <marker date="1555857769351" expanded="true" signature="675:695" ph="{...}" />
+            <marker date="1555857769351" expanded="true" signature="791:811" ph="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/CacheQueryMediator/Startup.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="489">
+          <caret line="48" selection-start-line="48" selection-end-line="48" />
+          <folding>
+            <marker date="1555858091378" expanded="false" signature="6:387" ph="..." />
+            <marker date="1555858091378" expanded="true" signature="444:1547" ph="{...}" />
+            <marker date="1555858091378" expanded="true" signature="503:566" ph="{...}" />
+            <marker date="1555858091378" expanded="true" signature="789:933" ph="{...}" />
+            <marker date="1555858091378" expanded="true" signature="1121:1541" ph="{...}" />
+            <marker date="1555858091378" expanded="true" signature="1168:1245" ph="{...}" />
+            <marker date="1555858091378" expanded="true" signature="1262:1465" ph="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/E639C1F9-3A20-4A8D-8F59-EBCD8F7FB8D6/1d/b0bc30d2/IRequestHandler`1.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="136">
+          <caret line="8" column="65" selection-start-line="8" selection-start-column="65" selection-end-line="8" selection-end-column="65" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/HabrCacheQueryInfrastructure/ICacheFactory.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="136">
+          <caret line="8" column="1" selection-start-line="8" selection-start-column="1" selection-end-line="8" selection-end-column="1" />
+          <folding>
+            <marker date="1555858086046" expanded="true" signature="66:186" ph="{...}" />
+            <marker date="1555858086046" expanded="true" signature="118:184" ph="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/HabrCacheQueryInfrastructure/CacheFactory.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="51">
+          <caret line="5" column="75" selection-start-line="5" selection-start-column="47" selection-end-line="5" selection-end-column="75" />
+          <folding>
+            <marker date="1555858091366" expanded="false" signature="6:86" ph="..." />
+            <marker date="1555858091366" expanded="true" signature="116:554" ph="{...}" />
+            <marker date="1555858091366" expanded="true" signature="224:552" ph="{...}" />
+            <marker date="1555858091366" expanded="true" signature="290:546" ph="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/E639C1F9-3A20-4A8D-8F59-EBCD8F7FB8D6/a5/b436d17f/IPipelineBehavior`2.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="204">
+          <caret line="13" column="11" selection-start-line="13" selection-start-column="11" selection-end-line="13" selection-end-column="11" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/E639C1F9-3A20-4A8D-8F59-EBCD8F7FB8D6/9b/d12131c1/IRequestPreProcessor`1.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="170">
+          <caret line="11" column="19" selection-start-line="11" selection-start-column="19" selection-end-line="11" selection-end-column="19" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/HabrCacheQueryInfrastructure/AsyncCachePipelineBehaviour.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="289">
+          <caret line="17" column="24" selection-start-line="17" selection-start-column="24" selection-end-line="17" selection-end-column="24" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/005673A8-2FC6-42F3-841F-4C4E95C61545/9c/29766083/Registration.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="442">
+          <caret line="33" column="24" selection-start-line="33" selection-start-column="24" selection-end-line="33" selection-end-column="24" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/HabrCacheQuery.DeepEqualsReferenceTypes/Hash.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="102">
+          <caret line="9" column="26" selection-start-line="9" selection-start-column="26" selection-end-line="9" selection-end-column="26" />
+          <folding>
+            <marker date="1555854391126" expanded="false" signature="6:92" ph="..." />
+            <marker date="1555854391126" expanded="true" signature="146:1587" ph="{...}" />
+            <marker date="1555854391126" expanded="true" signature="177:1585" ph="{...}" />
+            <marker date="1555854391126" expanded="true" signature="559:797" ph="{...}" />
+            <marker date="1555854391126" expanded="true" signature="861:1005" ph="{...}" />
+            <marker date="1555854391126" expanded="true" signature="1060:1579" ph="{...}" />
+            <marker date="1555854391126" expanded="true" signature="1143:1478" ph="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/HabrCacheQueryTests/ExampleQuery/DelayQuery.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret line="7" column="43" selection-start-line="7" selection-start-column="43" selection-end-line="7" selection-end-column="43" />
+          <folding>
+            <marker date="1555857430966" expanded="false" signature="6:163" ph="..." />
+            <marker date="1555857430966" expanded="true" signature="202:1581" ph="{...}" />
+            <marker date="1555857430966" expanded="true" signature="248:301" ph="{...}" />
+            <marker date="1555857430966" expanded="true" signature="329:341" ph="{...}" />
+            <marker date="1555857430966" expanded="true" signature="423:603" ph="{...}" />
+            <marker date="1555857430966" expanded="true" signature="505:597" ph="{...}" />
+            <marker date="1555857430966" expanded="true" signature="709:889" ph="{...}" />
+            <marker date="1555857430966" expanded="true" signature="791:883" ph="{...}" />
+            <marker date="1555857430966" expanded="true" signature="923:969" ph="{...}" />
+            <marker date="1555857430966" expanded="true" signature="1076:1192" ph="{...}" />
+            <marker date="1555857430966" expanded="true" signature="1130:1186" ph="{...}" />
+            <marker date="1555857430966" expanded="true" signature="1272:1579" ph="{...}" />
+            <marker date="1555857430966" expanded="true" signature="1383:1441" ph="{...}" />
+            <marker date="1555857430966" expanded="true" signature="1506:1573" ph="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/HabrCacheQuery/Startup.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="187">
+          <caret line="19" lean-forward="true" selection-start-line="19" selection-end-line="19" />
+          <folding>
+            <marker date="1555852101624" expanded="false" signature="6:257" ph="..." />
+            <marker date="1555852101624" expanded="true" signature="283:1481" ph="{...}" />
+            <marker date="1555852101624" expanded="true" signature="310:1479" ph="{...}" />
+            <marker date="1555852101624" expanded="true" signature="427:490" ph="{...}" />
+            <marker date="1555852101624" expanded="true" signature="713:863" ph="{...}" />
+            <marker date="1555852101624" expanded="true" signature="1051:1473" ph="{...}" />
+            <marker date="1555852101624" expanded="true" signature="1098:1175" ph="{...}" />
+            <marker date="1555852101624" expanded="true" signature="1192:1395" ph="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/HabrCacheQuery.DeepEqualsReferenceTypes/TypeCheckers.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="374">
+          <caret line="25" selection-start-line="25" selection-end-line="25" />
+          <folding>
+            <marker date="1555905905974" expanded="false" signature="6:92" ph="..." />
+            <marker date="1555905905974" expanded="true" signature="146:1177" ph="{...}" />
+            <marker date="1555905905974" expanded="true" signature="185:1175" ph="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/HabrCacheQuery/ServiceCollectionExtensions/AddCachedQueriesExtensions.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="204">
+          <caret line="31" column="50" selection-start-line="31" selection-start-column="50" selection-end-line="31" selection-end-column="50" />
+          <folding>
+            <marker date="1555905832044" expanded="true" signature="6:262" ph="..." />
+            <marker date="1555905832044" expanded="true" signature="316:4701" ph="{...}" />
+            <marker date="1555905832044" expanded="true" signature="369:4699" ph="{...}" />
+            <marker date="1555905832044" expanded="true" signature="384:2111" ph="predicates" />
+            <marker date="1555905832044" expanded="true" signature="2199:3491" ph="{...}" />
+            <marker date="1555905832044" expanded="true" signature="2771:3089" ph="{...}" />
+            <marker date="1555905832044" expanded="true" signature="3171:3479" ph="{...}" />
+            <marker date="1555905832044" expanded="true" signature="3773:4100" ph="{...}" />
+            <marker date="1555905832044" expanded="true" signature="4326:4693" ph="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/HabrCacheQuery.DeepEqualsReferenceTypes/DeepEquals.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-629">
+          <caret line="8" column="5" selection-start-line="8" selection-start-column="5" selection-end-line="8" selection-end-column="5" />
+          <folding>
+            <marker date="1555854434507" expanded="false" signature="6:92" ph="..." />
+            <marker date="1555854434507" expanded="true" signature="146:2967" ph="{...}" />
+            <marker date="1555854434507" expanded="true" signature="183:2965" ph="{...}" />
+            <marker date="1555854434507" expanded="true" signature="262:435" ph="{...}" />
+            <marker date="1555854434507" expanded="true" signature="498:796" ph="{...}" />
+            <marker date="1555854434507" expanded="true" signature="863:917" ph="{...}" />
+            <marker date="1555854434507" expanded="true" signature="986:1483" ph="{...}" />
+            <marker date="1555854434507" expanded="true" signature="1091:1396" ph="{...}" />
+            <marker date="1555854434507" expanded="true" signature="1560:2067" ph="{...}" />
+            <marker date="1555854434507" expanded="true" signature="1656:1973" ph="{...}" />
+            <marker date="1555854434507" expanded="true" signature="2133:2534" ph="{...}" />
+            <marker date="1555854434507" expanded="true" signature="2633:2959" ph="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/15782559-B649-400E-9D1C-FE8065BB09FC/ae/893b1185/ConcurrentDictionary`2.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-408">
+          <caret line="16" column="15" selection-start-line="16" selection-start-column="15" selection-end-line="16" selection-end-column="15" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/005673A8-2FC6-42F3-841F-4C4E95C61545/e0/253d3567/Container.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="289">
+          <caret line="1599" column="23" selection-start-line="1599" selection-start-column="23" selection-end-line="1599" selection-end-column="25" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/HabrCacheQueryInfrastructure/Query/CacheQueryWithCacheStrategy.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="255">
+          <caret line="17" column="9" lean-forward="true" selection-start-line="17" selection-start-column="9" selection-end-line="17" selection-end-column="9" />
+          <folding>
+            <marker date="1555863413902" expanded="false" signature="6:114" ph="..." />
+            <marker date="1555863413902" expanded="true" signature="160:812" ph="{...}" />
+            <marker date="1555863413902" expanded="true" signature="238:810" ph="{...}" />
+            <marker date="1555863413902" expanded="true" signature="428:714" ph="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/HabrCacheQueryInfrastructure/Query/CacheQuery.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-332">
+          <caret line="50" column="17" selection-start-line="50" selection-start-column="17" selection-end-line="50" selection-end-column="17" />
+          <folding>
+            <marker date="1555854363048" expanded="false" signature="6:196" ph="..." />
+            <marker date="1555854363048" expanded="true" signature="250:2584" ph="{...}" />
+            <marker date="1555854363048" expanded="true" signature="315:650" ph="{...}" />
+            <marker date="1555854363048" expanded="true" signature="506:554" ph="{...}" />
+            <marker date="1555854363048" expanded="true" signature="745:1033" ph="{...}" />
+            <marker date="1555854363048" expanded="true" signature="1007:1027" ph="{...}" />
+            <marker date="1555854363048" expanded="true" signature="1147:1399" ph="{...}" />
+            <marker date="1555854363048" expanded="true" signature="1373:1393" ph="{...}" />
+            <marker date="1555854363048" expanded="true" signature="1503:1622" ph="{...}" />
+            <marker date="1555854363048" expanded="true" signature="1596:1616" ph="{...}" />
+            <marker date="1555854363048" expanded="true" signature="1722:1819" ph="{...}" />
+            <marker date="1555854363048" expanded="true" signature="1793:1813" ph="{...}" />
+            <marker date="1555854363048" expanded="true" signature="1966:2095" ph="{...}" />
+            <marker date="1555854363048" expanded="true" signature="2069:2089" ph="{...}" />
+            <marker date="1555854363048" expanded="true" signature="2238:2345" ph="{...}" />
+            <marker date="1555854363048" expanded="true" signature="2319:2339" ph="{...}" />
+            <marker date="1555854363048" expanded="true" signature="2428:2582" ph="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/HabrCacheQueryInfrastructure/CastleCacheInterceptor/CacheInterceptor.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="739">
+          <caret line="53" column="17" selection-start-line="53" selection-start-column="17" selection-end-line="53" selection-end-column="17" />
+          <folding>
+            <marker date="1555916608204" expanded="true" signature="6:225" ph="..." />
+            <marker date="1555916608204" expanded="true" signature="278:2120" ph="{...}" />
+            <marker date="1555916608204" expanded="true" signature="352:779" ph="{...}" />
+            <marker date="1555916608204" expanded="true" signature="416:550" ph="{...}" />
+            <marker date="1555916608204" expanded="true" signature="667:773" ph="{...}" />
+            <marker date="1555916608204" expanded="true" signature="842:1464" ph="{...}" />
+            <marker date="1555916608204" expanded="true" signature="1000:1064" ph="{...}" />
+            <marker date="1555916608204" expanded="true" signature="1119:1458" ph="{...}" />
+            <marker date="1555916608204" expanded="true" signature="1313:1448" ph="{...}" />
+            <marker date="1555916608204" expanded="true" signature="1526:1588" ph="{...}" />
+            <marker date="1555916608204" expanded="true" signature="1737:2118" ph="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/HabrCacheQueryTests/Tests/CastleWindsor.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="510">
+          <caret line="52" column="19" lean-forward="true" selection-start-line="52" selection-start-column="19" selection-end-line="52" selection-end-column="19" />
+          <folding>
+            <marker date="1555916532200" expanded="false" signature="6:717" ph="..." />
+            <marker date="1555916532200" expanded="true" signature="734:2465" ph="{...}" />
+            <marker date="1555916532200" expanded="true" signature="787:2463" ph="{...}" />
+            <marker date="1555916532200" expanded="true" signature="1053:1741" ph="{...}" />
+            <marker date="1555916532200" expanded="true" signature="1824:1844" ph="{...}" />
+            <marker date="1555916532200" expanded="true" signature="1890:2210" ph="{...}" />
+            <marker date="1555916532200" expanded="true" signature="1933:2200" ph="{...}" />
+            <marker date="1555916532200" expanded="true" signature="2261:2457" ph="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/HabrCacheQueryTests/BaseCacheTest.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="331">
+          <caret line="54" column="43" selection-start-line="54" selection-start-column="30" selection-end-line="54" selection-end-column="43" />
+          <folding>
+            <marker date="1555918408678" expanded="false" signature="6:364" ph="..." />
+            <marker date="1555918408678" expanded="true" signature="381:2165" ph="{...}" />
+            <marker date="1555918408678" expanded="true" signature="449:770" ph="{...}" />
+            <marker date="1555918408678" expanded="true" signature="541:710" ph="{...}" />
+            <marker date="1555918408678" expanded="true" signature="744:764" ph="{...}" />
+            <marker date="1555918408678" expanded="true" signature="802:2163" ph="{...}" />
+            <marker date="1555918408678" expanded="true" signature="1274:1407" ph="{...}" />
+            <marker date="1555918408678" expanded="true" signature="1496:1734" ph="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/HabrCacheQueryTests/Tests/FodyCacheCacheTests.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="314">
+          <caret line="43" column="28" selection-start-line="43" selection-start-column="28" selection-end-line="43" selection-end-column="28" />
+          <folding>
+            <marker date="1555918408656" expanded="false" signature="6:429" ph="..." />
+            <marker date="1555918408656" expanded="true" signature="446:1585" ph="{...}" />
+            <marker date="1555918408656" expanded="true" signature="520:1583" ph="{...}" />
+            <marker date="1555918408656" expanded="true" signature="570:921" ph="{...}" />
+            <marker date="1555918408656" expanded="true" signature="657:911" ph="{...}" />
+            <marker date="1555918408656" expanded="true" signature="980:1188" ph="{...}" />
+            <marker date="1555918408656" expanded="true" signature="1236:1403" ph="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/HabrCacheQueryTests/Tests/ReflectionCacheCacheTests.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="331">
+          <caret line="108" selection-start-line="108" selection-end-line="108" />
+          <folding>
+            <marker date="1555918408666" expanded="false" signature="6:286" ph="..." />
+            <marker date="1555918408666" expanded="true" signature="303:4818" ph="{...}" />
+            <marker date="1555918408666" expanded="true" signature="310:1786" ph="stab" />
+            <marker date="1555918408666" expanded="true" signature="374:617" ph="{...}" />
+            <marker date="1555918408666" expanded="true" signature="479:537" ph="{...}" />
+            <marker date="1555918408666" expanded="true" signature="639:688" ph="{...}" />
+            <marker date="1555918408666" expanded="true" signature="725:937" ph="{...}" />
+            <marker date="1555918408666" expanded="true" signature="1019:1292" ph="{...}" />
+            <marker date="1555918408666" expanded="true" signature="1139:1197" ph="{...}" />
+            <marker date="1555918408666" expanded="true" signature="1323:1439" ph="{...}" />
+            <marker date="1555918408666" expanded="true" signature="1509:1770" ph="{...}" />
+            <marker date="1555918408666" expanded="true" signature="1623:1681" ph="{...}" />
+            <marker date="1555918408666" expanded="true" signature="1865:4816" ph="{...}" />
+            <marker date="1555918408666" expanded="true" signature="2147:2587" ph="{...}" />
+            <marker date="1555918408666" expanded="true" signature="2249:2577" ph="{...}" />
+            <marker date="1555918408666" expanded="true" signature="2631:2828" ph="{...}" />
+            <marker date="1555918408666" expanded="true" signature="2872:3069" ph="{...}" />
+            <marker date="1555918408666" expanded="true" signature="3113:3292" ph="{...}" />
+            <marker date="1555918408666" expanded="true" signature="3336:3607" ph="{...}" />
+            <marker date="1555918408666" expanded="true" signature="3651:3806" ph="{...}" />
+            <marker date="1555918408666" expanded="true" signature="3851:4169" ph="{...}" />
+            <marker date="1555918408666" expanded="true" signature="4229:4649" ph="{...}" />
+            <marker date="1555918408666" expanded="true" signature="4697:4810" ph="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/HabrCacheQueryTests/Tests/MediatorTests.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="34">
+          <caret line="42" column="36" selection-start-line="42" selection-start-column="36" selection-end-line="42" selection-end-column="36" />
+          <folding>
+            <marker date="1555901940611" expanded="false" signature="6:214" ph="..." />
+            <marker date="1555901940611" expanded="true" signature="231:1745" ph="{...}" />
+            <marker date="1555901940611" expanded="true" signature="303:315" ph="{...}" />
+            <marker date="1555901940611" expanded="true" signature="354:366" ph="{...}" />
+            <marker date="1555901940611" expanded="true" signature="471:790" ph="{...}" />
+            <marker date="1555901940611" expanded="true" signature="520:540" ph="{...}" />
+            <marker date="1555901940611" expanded="true" signature="662:784" ph="{...}" />
+            <marker date="1555901940611" expanded="true" signature="838:1743" ph="{...}" />
+            <marker date="1555901940611" expanded="true" signature="938:1212" ph="{...}" />
+            <marker date="1555901940611" expanded="true" signature="1241:1261" ph="{...}" />
+            <marker date="1555901940611" expanded="true" signature="1320:1482" ph="{...}" />
+            <marker date="1555901940611" expanded="true" signature="1363:1472" ph="{...}" />
+            <marker date="1555901940611" expanded="true" signature="1544:1737" ph="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/HabrCacheQueryInfrastructure/SimpleInjectorCache/CacheWithTypeOverrideEqAndGHC.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="314">
+          <caret line="27" column="13" selection-start-line="27" selection-start-column="13" selection-end-line="27" selection-end-column="13" />
+          <folding>
+            <marker date="1555918489045" expanded="true" signature="6:114" ph="..." />
+            <marker date="1555918489045" expanded="true" signature="164:1214" ph="{...}" />
+            <marker date="1555918489045" expanded="true" signature="247:414" ph="{...}" />
+            <marker date="1555918489045" expanded="true" signature="388:408" ph="{...}" />
+            <marker date="1555918489045" expanded="true" signature="484:681" ph="{...}" />
+            <marker date="1555918489045" expanded="true" signature="655:675" ph="{...}" />
+            <marker date="1555918489045" expanded="true" signature="749:1212" ph="{...}" />
+            <marker date="1555918489045" expanded="true" signature="994:1100" ph="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$USER_HOME$/AppData/Local/Symbols/src/nunit/nunit/4530d6dba175fae6ff8f8ade6c07fd05e6c1c7c5/src/NUnitFramework/framework/Internal/Reflect.cs">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="53">
-          <caret line="270" column="17" lean-forward="true" selection-start-line="270" selection-start-column="17" selection-end-line="270" selection-end-column="17" />
+        <state relative-caret-position="189">
+          <caret line="278" column="16" selection-start-line="278" selection-start-column="16" selection-end-line="278" selection-end-column="16" />
           <folding>
             <marker date="1550303173179" expanded="true" signature="0:1280" ph="/* Copyright (c) 2007-2018 Charlie Poole, Rob Prouse ... */" />
             <marker date="1550303173179" expanded="false" signature="1288:1521" ph="..." />
@@ -892,448 +1326,35 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/HabrCacheQuery/Controllers/ValuesController.cs">
+    <entry file="file://$USER_HOME$/AppData/Local/Symbols/src/nunit/nunit/4530d6dba175fae6ff8f8ade6c07fd05e6c1c7c5/src/NUnitFramework/framework/Internal/Execution/CompositeWorkItem.cs">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="85">
-          <caret line="10" column="17" selection-start-line="10" selection-start-column="17" selection-end-line="10" selection-end-column="17" />
-          <folding>
-            <marker date="1555745809947" expanded="false" signature="6:128" ph="..." />
-            <marker date="1555745809947" expanded="true" signature="166:974" ph="{...}" />
-            <marker date="1555745809947" expanded="true" signature="271:972" ph="{...}" />
-            <marker date="1555745809947" expanded="true" signature="376:450" ph="{...}" />
-            <marker date="1555745809947" expanded="true" signature="553:601" ph="{...}" />
-            <marker date="1555745809947" expanded="true" signature="698:718" ph="{...}" />
-            <marker date="1555745809947" expanded="true" signature="830:850" ph="{...}" />
-            <marker date="1555745809947" expanded="true" signature="946:966" ph="{...}" />
-          </folding>
+        <state relative-caret-position="223">
+          <caret line="263" column="16" selection-start-line="263" selection-start-column="16" selection-end-line="263" selection-end-column="16" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/HabrCacheQuery.DeepEqualsReferenceTypes/Class1.cs">
+    <entry file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/AA66E282-37B2-48FC-B09A-E37525780107/03/e92227c3/Enumerable.cs">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="119">
-          <caret line="7" column="1" selection-start-line="7" selection-start-column="1" selection-end-line="7" selection-end-column="1" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/HabrCacheQuery.DeepEqualsReferenceTypes/Hash.cs">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <folding>
-            <marker date="1555854391126" expanded="false" signature="6:92" ph="..." />
-            <marker date="1555854391126" expanded="true" signature="146:1587" ph="{...}" />
-            <marker date="1555854391126" expanded="true" signature="177:1585" ph="{...}" />
-            <marker date="1555854391126" expanded="true" signature="559:797" ph="{...}" />
-            <marker date="1555854391126" expanded="true" signature="861:1005" ph="{...}" />
-            <marker date="1555854391126" expanded="true" signature="1060:1579" ph="{...}" />
-            <marker date="1555854391126" expanded="true" signature="1143:1478" ph="{...}" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/HabrCacheQuery.DeepEqualsReferenceTypes/DeepEquals.cs">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="68">
-          <caret line="8" column="5" selection-start-line="8" selection-start-column="5" selection-end-line="8" selection-end-column="5" />
-          <folding>
-            <marker date="1555854434507" expanded="false" signature="6:92" ph="..." />
-            <marker date="1555854434507" expanded="true" signature="146:2967" ph="{...}" />
-            <marker date="1555854434507" expanded="true" signature="183:2965" ph="{...}" />
-            <marker date="1555854434507" expanded="true" signature="262:435" ph="{...}" />
-            <marker date="1555854434507" expanded="true" signature="498:796" ph="{...}" />
-            <marker date="1555854434507" expanded="true" signature="863:917" ph="{...}" />
-            <marker date="1555854434507" expanded="true" signature="986:1483" ph="{...}" />
-            <marker date="1555854434507" expanded="true" signature="1091:1396" ph="{...}" />
-            <marker date="1555854434507" expanded="true" signature="1560:2067" ph="{...}" />
-            <marker date="1555854434507" expanded="true" signature="1656:1973" ph="{...}" />
-            <marker date="1555854434507" expanded="true" signature="2133:2534" ph="{...}" />
-            <marker date="1555854434507" expanded="true" signature="2633:2959" ph="{...}" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/790C046D-3FEA-47D8-A082-BBCABBD0F621/4b/0bd6a5b6/ServiceCollectionExtensions.cs">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="323">
-          <caret line="130" column="35" selection-start-line="130" selection-start-column="35" selection-end-line="130" selection-end-column="35" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/CacheQueryMediator/appsettings.Development.json">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/32C7DA0B-DE3E-4433-B1FA-3A6000248638/7d/28515fbb/ServiceCollectionServiceExtensions.cs">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="333">
-          <caret line="185" column="44" selection-start-line="185" selection-start-column="44" selection-end-line="185" selection-end-column="44" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/HabrCacheQueryInfrastructure/Class1.cs">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/HabrCacheQueryInfrastructure/Query/IQuery.cs">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="102">
-          <caret line="6" column="13" selection-start-line="6" selection-start-column="13" selection-end-line="6" selection-end-column="13" />
-          <folding>
-            <marker date="1555752655668" expanded="true" signature="61:230" ph="{...}" />
-            <marker date="1555752655668" expanded="true" signature="102:145" ph="{...}" />
-            <marker date="1555752655668" expanded="true" signature="216:228" ph="{...}" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/HabrCacheQueryTests/ExampleQuery/DelayQuery.cs">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="17">
-          <caret line="7" column="43" selection-start-line="7" selection-start-column="43" selection-end-line="7" selection-end-column="43" />
-          <folding>
-            <marker date="1555857430966" expanded="false" signature="6:163" ph="..." />
-            <marker date="1555857430966" expanded="true" signature="202:1581" ph="{...}" />
-            <marker date="1555857430966" expanded="true" signature="248:301" ph="{...}" />
-            <marker date="1555857430966" expanded="true" signature="329:341" ph="{...}" />
-            <marker date="1555857430966" expanded="true" signature="423:603" ph="{...}" />
-            <marker date="1555857430966" expanded="true" signature="505:597" ph="{...}" />
-            <marker date="1555857430966" expanded="true" signature="709:889" ph="{...}" />
-            <marker date="1555857430966" expanded="true" signature="791:883" ph="{...}" />
-            <marker date="1555857430966" expanded="true" signature="923:969" ph="{...}" />
-            <marker date="1555857430966" expanded="true" signature="1076:1192" ph="{...}" />
-            <marker date="1555857430966" expanded="true" signature="1130:1186" ph="{...}" />
-            <marker date="1555857430966" expanded="true" signature="1272:1579" ph="{...}" />
-            <marker date="1555857430966" expanded="true" signature="1383:1441" ph="{...}" />
-            <marker date="1555857430966" expanded="true" signature="1506:1573" ph="{...}" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/HabrCacheQueryInfrastructure/Query/CanCacheMySelfUsingFody.cs">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="51">
-          <caret line="3" column="7" selection-start-line="1" selection-start-column="1" selection-end-line="3" selection-end-column="7" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/E639C1F9-3A20-4A8D-8F59-EBCD8F7FB8D6/3a/6ffb5950/RequestHandlerDelegate`1.cs">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="170">
-          <caret line="10" column="34" selection-start-line="10" selection-start-column="34" selection-end-line="10" selection-end-column="34" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/HabrCacheQueryTests/Tests/FodyCacheCacheTests.cs">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="353">
-          <caret line="48" selection-start-line="48" selection-end-line="48" />
-          <folding>
-            <marker date="1555857996919" expanded="false" signature="6:429" ph="..." />
-            <marker date="1555857996919" expanded="true" signature="446:1626" ph="{...}" />
-            <marker date="1555857996919" expanded="true" signature="520:1624" ph="{...}" />
-            <marker date="1555857996919" expanded="true" signature="570:921" ph="{...}" />
-            <marker date="1555857996919" expanded="true" signature="657:911" ph="{...}" />
-            <marker date="1555857996919" expanded="true" signature="980:1188" ph="{...}" />
-            <marker date="1555857996919" expanded="true" signature="1236:1444" ph="{...}" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/CacheQueryMediator/Program.cs">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="68">
-          <caret line="12" column="17" selection-start-line="12" selection-start-column="17" selection-end-line="12" selection-end-column="17" />
-          <folding>
-            <marker date="1555854748410" expanded="false" signature="6:255" ph="..." />
-            <marker date="1555854748410" expanded="true" signature="285:612" ph="{...}" />
-            <marker date="1555854748410" expanded="true" signature="312:610" ph="{...}" />
-            <marker date="1555854748410" expanded="true" signature="365:439" ph="{...}" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/HabrCacheQuery/Startup.cs">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="289">
-          <caret line="23" column="33" selection-start-line="23" selection-start-column="33" selection-end-line="23" selection-end-column="33" />
-          <folding>
-            <marker date="1555852101624" expanded="false" signature="6:257" ph="..." />
-            <marker date="1555852101624" expanded="true" signature="283:1481" ph="{...}" />
-            <marker date="1555852101624" expanded="true" signature="310:1479" ph="{...}" />
-            <marker date="1555852101624" expanded="true" signature="427:490" ph="{...}" />
-            <marker date="1555852101624" expanded="true" signature="713:863" ph="{...}" />
-            <marker date="1555852101624" expanded="true" signature="1051:1473" ph="{...}" />
-            <marker date="1555852101624" expanded="true" signature="1098:1175" ph="{...}" />
-            <marker date="1555852101624" expanded="true" signature="1192:1395" ph="{...}" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/CacheQueryMediator/Controllers/ValuesController.cs">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="136">
-          <caret line="13" selection-start-line="13" selection-end-line="13" />
-          <folding>
-            <marker date="1555857769351" expanded="false" signature="6:143" ph="..." />
-            <marker date="1555857769351" expanded="true" signature="185:819" ph="{...}" />
-            <marker date="1555857769351" expanded="true" signature="290:817" ph="{...}" />
-            <marker date="1555857769351" expanded="true" signature="398:446" ph="{...}" />
-            <marker date="1555857769351" expanded="true" signature="543:563" ph="{...}" />
-            <marker date="1555857769351" expanded="true" signature="675:695" ph="{...}" />
-            <marker date="1555857769351" expanded="true" signature="791:811" ph="{...}" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/CacheQueryMediator/Startup.cs">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="489">
-          <caret line="48" selection-start-line="48" selection-end-line="48" />
-          <folding>
-            <marker date="1555858091378" expanded="false" signature="6:387" ph="..." />
-            <marker date="1555858091378" expanded="true" signature="417:1549" ph="{...}" />
-            <marker date="1555858091378" expanded="true" signature="444:1547" ph="{...}" />
-            <marker date="1555858091378" expanded="true" signature="503:566" ph="{...}" />
-            <marker date="1555858091378" expanded="true" signature="789:933" ph="{...}" />
-            <marker date="1555858091378" expanded="true" signature="1121:1541" ph="{...}" />
-            <marker date="1555858091378" expanded="true" signature="1168:1245" ph="{...}" />
-            <marker date="1555858091378" expanded="true" signature="1262:1465" ph="{...}" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/E639C1F9-3A20-4A8D-8F59-EBCD8F7FB8D6/1d/b0bc30d2/IRequestHandler`1.cs">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="136">
-          <caret line="8" column="65" selection-start-line="8" selection-start-column="65" selection-end-line="8" selection-end-column="65" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/HabrCacheQueryInfrastructure/ICacheFactory.cs">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="136">
-          <caret line="8" column="1" selection-start-line="8" selection-start-column="1" selection-end-line="8" selection-end-column="1" />
-          <folding>
-            <marker date="1555858086046" expanded="true" signature="66:186" ph="{...}" />
-            <marker date="1555858086046" expanded="true" signature="118:184" ph="{...}" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/HabrCacheQueryInfrastructure/CacheFactory.cs">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="51">
-          <caret line="5" column="75" selection-start-line="5" selection-start-column="47" selection-end-line="5" selection-end-column="75" />
-          <folding>
-            <marker date="1555858091366" expanded="false" signature="6:86" ph="..." />
-            <marker date="1555858091366" expanded="true" signature="116:554" ph="{...}" />
-            <marker date="1555858091366" expanded="true" signature="224:552" ph="{...}" />
-            <marker date="1555858091366" expanded="true" signature="290:546" ph="{...}" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/E639C1F9-3A20-4A8D-8F59-EBCD8F7FB8D6/a5/b436d17f/IPipelineBehavior`2.cs">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="204">
-          <caret line="13" column="11" selection-start-line="13" selection-start-column="11" selection-end-line="13" selection-end-column="11" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/E639C1F9-3A20-4A8D-8F59-EBCD8F7FB8D6/9b/d12131c1/IRequestPreProcessor`1.cs">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="170">
-          <caret line="11" column="19" selection-start-line="11" selection-start-column="19" selection-end-line="11" selection-end-column="19" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/HabrCacheQueryTests/Tests/MediatorTests.cs">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="346">
-          <caret line="39" column="71" selection-start-line="39" selection-start-column="71" selection-end-line="39" selection-end-column="71" />
-          <folding>
-            <marker date="1555858754541" expanded="true" signature="6:214" ph="..." />
-            <marker date="1555858754541" expanded="true" signature="231:1717" ph="{...}" />
-            <marker date="1555858754541" expanded="true" signature="303:315" ph="{...}" />
-            <marker date="1555858754541" expanded="true" signature="354:366" ph="{...}" />
-            <marker date="1555858754541" expanded="true" signature="471:790" ph="{...}" />
-            <marker date="1555858754541" expanded="true" signature="520:540" ph="{...}" />
-            <marker date="1555858754541" expanded="true" signature="662:784" ph="{...}" />
-            <marker date="1555858754541" expanded="true" signature="838:1715" ph="{...}" />
-            <marker date="1555858754541" expanded="true" signature="938:1212" ph="{...}" />
-            <marker date="1555858754541" expanded="true" signature="1213:1233" ph="{...}" />
-            <marker date="1555858754541" expanded="true" signature="1292:1454" ph="{...}" />
-            <marker date="1555858754541" expanded="true" signature="1335:1444" ph="{...}" />
-            <marker date="1555858754541" expanded="true" signature="1516:1709" ph="{...}" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/HabrCacheQueryInfrastructure/AsyncCachePipelineBehaviour.cs">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="289">
-          <caret line="17" column="24" selection-start-line="17" selection-start-column="24" selection-end-line="17" selection-end-column="24" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/HabrCacheQuery/ServiceCollectionExtensions/AddCachedQueriesExtensions.cs">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="136">
-          <caret line="50" selection-start-line="50" selection-end-line="50" />
-          <folding>
-            <marker date="1555862377941" expanded="false" signature="6:142" ph="..." />
-            <marker date="1555862377941" expanded="true" signature="196:4744" ph="{...}" />
-            <marker date="1555862377941" expanded="true" signature="249:4742" ph="{...}" />
-            <marker date="1555862377941" expanded="false" signature="264:2128" ph="predicates" />
-            <marker date="1555862377941" expanded="true" signature="2216:3534" ph="{...}" />
-            <marker date="1555862377941" expanded="true" signature="2788:3119" ph="{...}" />
-            <marker date="1555862377941" expanded="true" signature="3201:3522" ph="{...}" />
-            <marker date="1555862377941" expanded="true" signature="3816:4143" ph="{...}" />
-            <marker date="1555862377941" expanded="true" signature="4369:4736" ph="{...}" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/HabrCacheQuery.DeepEqualsReferenceTypes/TypeCheckers.cs">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="68">
-          <caret line="7" column="36" selection-start-line="7" selection-start-column="24" selection-end-line="7" selection-end-column="36" />
-          <folding>
-            <marker date="1555857239281" expanded="false" signature="6:92" ph="..." />
-            <marker date="1555857239281" expanded="true" signature="146:885" ph="{...}" />
-            <marker date="1555857239281" expanded="true" signature="185:883" ph="{...}" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/005673A8-2FC6-42F3-841F-4C4E95C61545/e0/253d3567/Container.cs">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="205">
-          <caret line="1531" column="13" selection-start-line="1531" selection-start-column="13" selection-end-line="1531" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/005673A8-2FC6-42F3-841F-4C4E95C61545/9c/29766083/Registration.cs">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="289">
-          <caret line="33" column="24" selection-start-line="33" selection-start-column="24" selection-end-line="33" selection-end-column="24" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/HabrCacheQueryInfrastructure/Query/CacheQuery.cs">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-378">
-          <caret line="50" column="17" selection-start-line="50" selection-start-column="17" selection-end-line="50" selection-end-column="17" />
-          <folding>
-            <marker date="1555854363048" expanded="false" signature="6:196" ph="..." />
-            <marker date="1555854363048" expanded="true" signature="250:2584" ph="{...}" />
-            <marker date="1555854363048" expanded="true" signature="315:650" ph="{...}" />
-            <marker date="1555854363048" expanded="true" signature="506:554" ph="{...}" />
-            <marker date="1555854363048" expanded="true" signature="745:1033" ph="{...}" />
-            <marker date="1555854363048" expanded="true" signature="1007:1027" ph="{...}" />
-            <marker date="1555854363048" expanded="true" signature="1147:1399" ph="{...}" />
-            <marker date="1555854363048" expanded="true" signature="1373:1393" ph="{...}" />
-            <marker date="1555854363048" expanded="true" signature="1503:1622" ph="{...}" />
-            <marker date="1555854363048" expanded="true" signature="1596:1616" ph="{...}" />
-            <marker date="1555854363048" expanded="true" signature="1722:1819" ph="{...}" />
-            <marker date="1555854363048" expanded="true" signature="1793:1813" ph="{...}" />
-            <marker date="1555854363048" expanded="true" signature="1966:2095" ph="{...}" />
-            <marker date="1555854363048" expanded="true" signature="2069:2089" ph="{...}" />
-            <marker date="1555854363048" expanded="true" signature="2238:2345" ph="{...}" />
-            <marker date="1555854363048" expanded="true" signature="2319:2339" ph="{...}" />
-            <marker date="1555854363048" expanded="true" signature="2428:2582" ph="{...}" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/HabrCacheQueryInfrastructure/Query/CacheQueryWithCacheStrategy.cs">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="102">
-          <caret line="6" column="44" selection-start-line="6" selection-start-column="17" selection-end-line="6" selection-end-column="44" />
-          <folding>
-            <marker date="1555863413902" expanded="true" signature="6:64" ph="..." />
-            <marker date="1555863413902" expanded="true" signature="160:812" ph="{...}" />
-            <marker date="1555863413902" expanded="true" signature="238:810" ph="{...}" />
-            <marker date="1555863413902" expanded="true" signature="428:714" ph="{...}" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/HabrCacheQueryTests/Tests/ReflectionCacheCacheTests.cs">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-170">
-          <caret line="32" column="35" selection-start-line="32" selection-start-column="17" selection-end-line="32" selection-end-column="35" />
-          <folding>
-            <marker date="1555857996908" expanded="false" signature="6:286" ph="..." />
-            <marker date="1555857996908" expanded="true" signature="303:5088" ph="{...}" />
-            <marker date="1555857996908" expanded="true" signature="310:1786" ph="stab" />
-            <marker date="1555857996908" expanded="true" signature="374:617" ph="{...}" />
-            <marker date="1555857996908" expanded="true" signature="479:537" ph="{...}" />
-            <marker date="1555857996908" expanded="true" signature="639:688" ph="{...}" />
-            <marker date="1555857996908" expanded="true" signature="725:937" ph="{...}" />
-            <marker date="1555857996908" expanded="true" signature="1019:1292" ph="{...}" />
-            <marker date="1555857996908" expanded="true" signature="1139:1197" ph="{...}" />
-            <marker date="1555857996908" expanded="true" signature="1323:1439" ph="{...}" />
-            <marker date="1555857996908" expanded="true" signature="1509:1770" ph="{...}" />
-            <marker date="1555857996908" expanded="true" signature="1623:1681" ph="{...}" />
-            <marker date="1555857996908" expanded="true" signature="1865:5086" ph="{...}" />
-            <marker date="1555857996908" expanded="true" signature="2147:2587" ph="{...}" />
-            <marker date="1555857996908" expanded="true" signature="2249:2577" ph="{...}" />
-            <marker date="1555857996908" expanded="true" signature="2631:2869" ph="{...}" />
-            <marker date="1555857996908" expanded="true" signature="2913:3157" ph="{...}" />
-            <marker date="1555857996908" expanded="true" signature="3201:3421" ph="{...}" />
-            <marker date="1555857996908" expanded="true" signature="3465:3783" ph="{...}" />
-            <marker date="1555857996908" expanded="true" signature="3827:4029" ph="{...}" />
-            <marker date="1555857996908" expanded="true" signature="4074:4439" ph="{...}" />
-            <marker date="1555857996908" expanded="true" signature="4499:4919" ph="{...}" />
-            <marker date="1555857996908" expanded="true" signature="4967:5080" ph="{...}" />
-          </folding>
+          <caret line="8" lean-forward="true" selection-start-line="8" selection-end-line="8" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/HabrCacheQueryTests/Tests/SimpleInjectorCacheTests.cs">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="289">
-          <caret line="17" column="66" selection-start-line="14" selection-start-column="12" selection-end-line="17" selection-end-column="66" />
+        <state relative-caret-position="227">
+          <caret line="61" selection-start-line="61" selection-end-line="61" />
           <folding>
-            <marker date="1555863987356" expanded="true" signature="6:189" ph="..." />
-            <marker date="1555863987356" expanded="true" signature="206:680" ph="{...}" />
-            <marker date="1555863987356" expanded="true" signature="266:678" ph="{...}" />
-            <marker date="1555863987356" expanded="true" signature="330:651" ph="{...}" />
-            <marker date="1555863987356" expanded="true" signature="386:641" ph="/* container.Register(); ... */" />
-            <marker date="1555863987356" expanded="true" signature="652:672" ph="{...}" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/HabrCacheQueryTests/BaseCacheTest.cs">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="391">
-          <caret line="45" column="26" selection-start-line="45" selection-start-column="26" selection-end-line="45" selection-end-column="26" />
-          <folding>
-            <marker date="1555857996878" expanded="false" signature="6:364" ph="..." />
-            <marker date="1555857996878" expanded="true" signature="381:1861" ph="{...}" />
-            <marker date="1555857996878" expanded="true" signature="449:737" ph="{...}" />
-            <marker date="1555857996878" expanded="true" signature="541:710" ph="{...}" />
-            <marker date="1555857996878" expanded="true" signature="711:731" ph="{...}" />
-            <marker date="1555857996878" expanded="true" signature="769:1859" ph="{...}" />
-            <marker date="1555857996878" expanded="true" signature="1082:1153" ph="{...}" />
-            <marker date="1555857996878" expanded="true" signature="1242:1478" ph="{...}" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/HabrCacheQueryTests/Tests/CastleWindsor.cs">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="351">
-          <caret line="41" column="13" lean-forward="true" selection-start-line="41" selection-start-column="13" selection-end-line="41" selection-end-column="13" />
-          <folding>
-            <marker date="1555864474440" expanded="true" signature="6:430" ph="..." />
-            <marker date="1555864474440" expanded="true" signature="514:2033" ph="{...}" />
-            <marker date="1555864474440" expanded="true" signature="567:2031" ph="{...}" />
-            <marker date="1555864474440" expanded="true" signature="833:1442" ph="{...}" />
-            <marker date="1555864474440" expanded="true" signature="1443:1463" ph="{...}" />
-            <marker date="1555864474440" expanded="true" signature="1509:1789" ph="{...}" />
-            <marker date="1555864474440" expanded="true" signature="1552:1779" ph="{...}" />
-            <marker date="1555864474440" expanded="true" signature="1840:2025" ph="{...}" />
+            <marker date="1555921344031" expanded="true" signature="6:378" ph="..." />
+            <marker date="1555921344031" expanded="true" signature="395:2521" ph="{...}" />
+            <marker date="1555921344031" expanded="true" signature="455:2519" ph="{...}" />
+            <marker date="1555921344031" expanded="true" signature="634:2014" ph="{...}" />
+            <marker date="1555921344031" expanded="true" signature="824:1038" ph="{...}" />
+            <marker date="1555921344031" expanded="true" signature="1161:1353" ph="{...}" />
+            <marker date="1555921344031" expanded="true" signature="2048:2068" ph="{...}" />
+            <marker date="1555921344031" expanded="true" signature="2113:2316" ph="{...}" />
+            <marker date="1555921344031" expanded="true" signature="2186:2306" ph="{...}" />
+            <marker date="1555921344031" expanded="true" signature="2359:2513" ph="{...}" />
           </folding>
         </state>
       </provider>

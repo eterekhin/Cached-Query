@@ -1,8 +1,14 @@
 using System;
 using System.Collections.Concurrent;
 using System.ComponentModel;
+using System.Reflection;
+using CacheQueryMediator.CastleCacheInterceptor;
+using Castle.DynamicProxy;
 using Castle.Facilities.AspNetCore;
+using Castle.MicroKernel.Lifestyle;
+using Castle.MicroKernel.Registration;
 using Castle.Windsor;
+using Castle.Windsor.MsDependencyInjection;
 using HabrCacheQuery.ExampleQuery;
 using HabrCacheQuery.Query;
 using HabrCacheQuery.ServiceCollectionExtensions;
@@ -22,15 +28,18 @@ namespace Tests
         private static WindsorContainer container = new WindsorContainer();
 
         public CastleWindsorTest() : base(sc =>
-        {
-            container.Register(For<IQuery<Dto, Something>>().ImplementedBy<DtoQuery>().LifestyleScoped());
-            container.Register(For<IQuery<DtoWithIEnumerable, Something>>().ImplementedBy<DtoWithIEnumerableQuery>()
-                .LifestyleScoped());
-            container.Register(For<IRepository>().ImplementedBy<MockRepository>().LifestyleScoped());
-            container.Register(For(typeof(IQuery<,>)).ImplementedBy(typeof(CacheQueryWithCacheStrategy<,>))
-                .LifestyleScoped());
-            sc.AddWindsor(container, x => { }, () => sc.BuildServiceProvider());
-        })
+            {
+                container.Register(Classes.FromAssembly(Assembly.GetExecutingAssembly())
+                    .BasedOn(typeof(IQuery<,>)).WithServiceBase());
+                container.Register(For(typeof(CacheInterceptor<,>)));
+                container.Register(
+                    For(typeof(IConcurrentDictionaryFactory<,>))
+                        .ImplementedBy(typeof(CacheFactory<,>))
+                        .LifestyleScoped());
+                container.Kernel.ProxyFactory.AddInterceptorSelector(new CacheInterceptorsSelector());
+                container.Register(For<IRepository>().UsingFactoryMethod(x => MockRepositoryObject).LifestyleScoped());
+            },
+            sc => WindsorRegistrationHelper.CreateServiceProvider(container, sc))
         {
         }
 
@@ -40,6 +49,7 @@ namespace Tests
         {
             using (ServiceScope)
             {
+                container.BeginScope();
                 query1 = ServiceScope.ServiceProvider.GetService<IQuery<Dto, Something>>();
                 query2 = ServiceScope.ServiceProvider.GetService<IQuery<DtoWithIEnumerable, Something>>();
             }
@@ -48,7 +58,7 @@ namespace Tests
         [Test]
         public void OneQueryTest()
         {
-            var dto = new Dto();
+            var dto = new Dto() {One = 12};
             query1.Query(dto);
             query1.Query(dto);
             RepositoryMock.Verify(x => x.GetSomething(), Times.Once);

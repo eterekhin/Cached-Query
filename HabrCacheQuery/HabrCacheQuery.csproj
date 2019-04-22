@@ -6,14 +6,11 @@
     </PropertyGroup>
 
     <ItemGroup>
-        <PackageReference Include="Equals.Fody" Version="1.9.5" />
-        <PackageReference Include="Fody" Version="4.1.0" />
         <PackageReference Include="Microsoft.AspNetCore.App" />
         <PackageReference Include="Microsoft.AspNetCore.Razor.Design" Version="2.2.0" PrivateAssets="All" />
     </ItemGroup>
 
     <ItemGroup>
-      <ProjectReference Include="..\HabrCacheQuery.DeepEqualsReferenceTypes\HabrCacheQuery.DeepEqualsReferenceTypes.csproj" />
       <ProjectReference Include="..\HabrCacheQueryInfrastructure\HabrCacheQueryInfrastructure.csproj" />
     </ItemGroup>
 

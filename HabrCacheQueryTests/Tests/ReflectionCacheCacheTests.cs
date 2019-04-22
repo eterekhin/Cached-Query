@@ -95,7 +95,7 @@ namespace Tests
             var dto1 = new Dto() {One = 1};
             query.Query(dto);
             query.Query(dto1);
-            RepositoryMock.Verify(x => x.GetSomething(), Times.Once);
+            VerifyOneCall();
         }
 
         [Test]
@@ -105,7 +105,7 @@ namespace Tests
             var dto1 = new Dto() {One = 2};
             query.Query(dto);
             query.Query(dto1);
-            RepositoryMock.Verify(x => x.GetSomething(), Times.Exactly(2));
+            VerifyTwoCall();
         }
 
         [Test]
@@ -113,7 +113,7 @@ namespace Tests
         {
             queryWithIEnumerable.Query(GetDtoWithIEnumerable());
             queryWithIEnumerable.Query(GetDtoWithIEnumerable());
-            RepositoryMock.Verify(x => x.GetSomething(), Times.Once);
+            VerifyOneCall();
         }
 
         [Test]
@@ -124,7 +124,7 @@ namespace Tests
             dto2.En1 = new[] {1};
             queryWithIEnumerable.Query(dto1);
             queryWithIEnumerable.Query(dto2);
-            RepositoryMock.Verify(x => x.GetSomething(), Times.Exactly(2));
+            VerifyTwoCall();
         }
 
         [Test]
@@ -132,7 +132,7 @@ namespace Tests
         {
             queryWithClass.Query(GetDtoWithClass());
             queryWithClass.Query(GetDtoWithClass());
-            RepositoryMock.Verify(x => x.GetSomething(), Times.Exactly(1));
+            VerifyOneCall();
         }
 
 
@@ -144,7 +144,7 @@ namespace Tests
             dto2.DtoWithIEnumerable.En2 = Enumerable.Range(1, 1000).Select(x => x.ToString()).ToArray();
             queryWithClass.Query(dto1);
             queryWithClass.Query(dto2);
-            RepositoryMock.Verify(x => x.GetSomething(), Times.Exactly(2));
+            VerifyTwoCall();
         }
 
         private DtoWithIEnumerable GetDtoWithIEnumerable()

@@ -2,7 +2,9 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using HabrCacheQuery.Query;
+using HabrCacheQuery.ServiceCollectionExtensions;
 using Microsoft.Extensions.DependencyInjection;
+using static HabrCacheQuery.ServiceCollectionExtensions.TypeCheckers;
 
 namespace HabrCacheQuery.ServiceCollectionExtensions
 {
@@ -10,8 +12,7 @@ namespace HabrCacheQuery.ServiceCollectionExtensions
     {
         #region predicates
 
-        private static readonly Func<Type, bool> IsClass = type =>
-            type.IsClass && !type.IsAbstract && !type.IsGenericTypeDefinition;
+        
 
         private static Type GetQueryInterface(Type definition, Type destType) =>
             destType.GetInterfaces()
@@ -61,14 +62,14 @@ namespace HabrCacheQuery.ServiceCollectionExtensions
             serviceCollection.QueryDecorator(asyncQueries, (sourceType, destType) =>
             {
                 // ReSharper disable once ConvertToLambdaExpression
-                return (TypeCheckers.EqualsGetHashCodeOverride(sourceType)
+                return (EqualsGetHashCodeOverride(sourceType)
                     ? typeof(CacheAsyncQuery<,>)
                     : typeof(CacheAsyncQueryWithReflectionComparer<,>)).MakeGenericType(sourceType, destType);
             });
             serviceCollection.QueryDecorator(queries, (sourceType, destType) =>
             {
                 // ReSharper disable once ConvertToLambdaExpression
-                return (TypeCheckers.EqualsGetHashCodeOverride(sourceType)
+                return (EqualsGetHashCodeOverride(sourceType)
                     ? typeof(CacheQuery<,>)
                     : typeof(CacheQueryWithReflectionComparer<,>)).MakeGenericType(sourceType, destType);
             });

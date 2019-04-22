@@ -41,7 +41,7 @@ namespace Tests
             var stub = new StubForFodyCanCacheMySelf();
             Query.Query(stub);
             Query.Query(stub);
-            RepositoryMock.Verify(x => x.GetSomething(), Times.Once);
+            VerifyOneCall();
         }
 
         private IQuery<StubForFodyCanCacheMySelf, Something> Query { get; set; }

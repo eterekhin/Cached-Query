@@ -40,7 +40,7 @@ namespace Tests
             sc.AddScoped(typeof(IPipelineBehavior<,>), typeof(CachePipelineBehaviour<,>));
             sc.AddScoped<IRepository, MockRepository>();
             sc.AddScoped(typeof(ICacheFactory<,>), typeof(CacheFactory<,>));
-        })
+        },x=>x.BuildServiceProvider())
         {
         }
 

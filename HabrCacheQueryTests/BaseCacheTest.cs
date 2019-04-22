@@ -19,21 +19,23 @@ namespace Tests
             {
                 collection.AddScoped<IRepository, MockRepository>(x => MockRepositoryObject);
                 collection.AddCachedQueries();
-            })
+            }, sc => sc.BuildServiceProvider())
         {
         }
     }
 
     public class BaseCacheTest
     {
+        private readonly Func<IServiceCollection, IServiceProvider> _serviceProviderFactory;
         private readonly Action<ServiceCollection> _cachedQueryRealization;
         protected IServiceScope ServiceScope => ServiceProvider.CreateScope();
         private IServiceProvider ServiceProvider { get; set; }
 
 
-        protected BaseCacheTest(
-            Action<IServiceCollection> registrations)
+        protected BaseCacheTest(Action<IServiceCollection> registrations,
+            Func<IServiceCollection, IServiceProvider> serviceProviderFactory)
         {
+            _serviceProviderFactory = serviceProviderFactory;
             ServiceProviderInitial(registrations);
         }
 
@@ -43,14 +45,14 @@ namespace Tests
             var collection = new ServiceCollection();
 
             Registrations(collection);
-            ServiceProvider = collection.BuildServiceProvider();
+            ServiceProvider = _serviceProviderFactory(collection);
         }
 
 
         protected static Mock<MockRepository> RepositoryMock { get; private set; } = new Mock<MockRepository>();
         protected static MockRepository MockRepositoryObject => RepositoryMock.Object;
 
-        protected static int CountCallRepositoryGetSomethingMethod =>
-            RepositoryMock.Invocations.Count(x => x.Method.Name == nameof(IRepository.GetSomething));
+        protected static void VerifyOneCall() => RepositoryMock.Verify(x => x.GetSomething(), Times.Once);
+        protected static void VerifyTwoCall() => RepositoryMock.Verify(x => x.GetSomething(), Times.Exactly(2));
     }
 }
