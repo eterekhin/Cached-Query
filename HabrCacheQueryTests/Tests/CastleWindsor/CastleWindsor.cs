@@ -42,6 +42,12 @@ namespace Tests
             }
         }
 
+        [OneTimeTearDown]
+        public void OneTimeTearDown()
+        {
+            container.Dispose();
+        }
+
 
         protected override Action<IServiceCollection> Registrations =>
             sc =>

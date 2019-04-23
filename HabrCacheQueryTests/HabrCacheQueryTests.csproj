@@ -43,4 +43,9 @@
       <ProjectReference Include="..\HabrCacheQuery\HabrCacheQuery.csproj" />
     </ItemGroup>
 
+    <ItemGroup>
+      <Compile Include="Tests\.NetCoreContainer\CacheReflectionQuery.cs" />
+      <Compile Include="Tests\.NetCoreContainer\FodyOverrideEqualsAndGetHashCodeCacheCacheTests.cs" />
+    </ItemGroup>
+
 </Project>

@@ -1,19 +1,29 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ContentModelStore">
-    <e p="$USER_HOME$/.Rider2018.3/system/extResources" t="IncludeRecursive" />
-    <e p="$USER_HOME$/.Rider2018.3/system/resharper-host/local/Transient/ReSharperHost/v183/SolutionCaches/_HabrCacheQuery.2093285673.00" t="ExcludeRecursive" />
-    <e p="$USER_HOME$/.nuget/packages/nunit3testadapter/3.11.0/build/netcoreapp1.0/NUnit3.TestAdapter.dll" t="Include" />
-    <e p="$USER_HOME$/.nuget/packages/nunit3testadapter/3.11.0/build/netcoreapp1.0/NUnit3.TestAdapter.pdb" t="Include" />
-    <e p="$USER_HOME$/.nuget/packages/nunit3testadapter/3.11.0/build/netcoreapp1.0/nunit.engine.netstandard.dll" t="Include" />
-    <e p="$PROJECT_DIR$" t="IncludeFlat">
+    <e p="C:\Users\evgeniy\.nuget\packages\nunit3testadapter\3.11.0\build\netcoreapp1.0\nunit.engine.netstandard.dll" t="Include" />
+    <e p="C:\Users\evgeniy\.nuget\packages\nunit3testadapter\3.11.0\build\netcoreapp1.0\NUnit3.TestAdapter.dll" t="Include" />
+    <e p="C:\Users\evgeniy\.nuget\packages\nunit3testadapter\3.11.0\build\netcoreapp1.0\NUnit3.TestAdapter.pdb" t="Include" />
+    <e p="C:\Users\evgeniy\.Rider2018.3\system\extResources" t="IncludeRecursive" />
+    <e p="C:\Users\evgeniy\.Rider2018.3\system\resharper-host\local\Transient\ReSharperHost\v183\SolutionCaches\_HabrCacheQuery.-1806225208.00" t="ExcludeRecursive" />
+    <e p="C:\Users\evgeniy\RiderProjects\HabrCacheQuery" t="IncludeFlat">
       <e p="HabrCacheQuery" t="IncludeRecursive">
+        <e p="appsettings.Development.json" t="Include" />
+        <e p="appsettings.json" t="Include" />
+        <e p="bin" t="ExcludeRecursive" />
         <e p="Controllers" t="Include">
           <e p="ValuesController.cs" t="Include" />
         </e>
         <e p="FodyWeavers.xml" t="Include" />
         <e p="FodyWeavers.xsd" t="Include" />
         <e p="HabrCacheQuery.csproj" t="IncludeRecursive" />
+        <e p="obj" t="ExcludeRecursive">
+          <e p="Debug" t="Include">
+            <e p="netcoreapp2.2" t="Include">
+              <e p="HabrCacheQuery.AssemblyInfo.cs" t="Include" />
+            </e>
+          </e>
+        </e>
         <e p="Program.cs" t="Include" />
         <e p="Properties" t="Include">
           <e p="launchSettings.json" t="Include" />
@@ -22,23 +32,12 @@
           <e p="AddCachedQueriesExtensions.cs" t="Include" />
         </e>
         <e p="Startup.cs" t="Include" />
-        <e p="appsettings.Development.json" t="Include" />
-        <e p="appsettings.json" t="Include" />
-        <e p="bin" t="ExcludeRecursive" />
-        <e p="obj" t="ExcludeRecursive">
-          <e p="Debug" t="Include">
-            <e p="netcoreapp2.2" t="Include">
-              <e p="HabrCacheQuery.AssemblyInfo.cs" t="Include" />
-            </e>
-          </e>
-        </e>
       </e>
       <e p="HabrCacheQuery.DeepEqualsReferenceTypes" t="IncludeRecursive">
+        <e p="bin" t="ExcludeRecursive" />
         <e p="DeepEquals.cs" t="Include" />
         <e p="HabrCacheQuery.DeepEqualsReferenceTypes.csproj" t="IncludeRecursive" />
         <e p="Hash.cs" t="Include" />
-        <e p="TypeCheckers.cs" t="Include" />
-        <e p="bin" t="ExcludeRecursive" />
         <e p="obj" t="ExcludeRecursive">
           <e p="Debug" t="Include">
             <e p="netcoreapp2.2" t="Include">
@@ -46,27 +45,25 @@
             </e>
           </e>
         </e>
+        <e p="TypeCheckers.cs" t="Include" />
       </e>
       <e p="HabrCacheQuery.sln" t="IncludeFlat" />
       <e p="HabrCacheQueryInfrastructure" t="IncludeRecursive">
-        <e p="CQRS" t="Include">
-          <e p="IQuery.cs" t="Include" />
-        </e>
+        <e p="bin" t="ExcludeRecursive" />
         <e p="CacheQuery" t="Include">
           <e p="CacheQuery.cs" t="Include" />
         </e>
         <e p="CastleCacheInterceptor" t="Include">
           <e p="CacheInterceptor.cs" t="Include" />
         </e>
+        <e p="CQRS" t="Include">
+          <e p="IQuery.cs" t="Include" />
+        </e>
         <e p="FodyWeavers.xml" t="Include" />
         <e p="HabrCacheQueryInfrastructure.csproj" t="IncludeRecursive" />
         <e p="Mediator" t="Include">
-          <e p="AsyncCachePipelineBehaviour.cs" t="Include" />
+          <e p="ASyncCachePipelineBehaviour.cs" t="Include" />
         </e>
-        <e p="SimpleInjectorCache" t="Include">
-          <e p="CacheWithTypeOverrideEqAndGHC.cs" t="Include" />
-        </e>
-        <e p="bin" t="ExcludeRecursive" />
         <e p="obj" t="ExcludeRecursive">
           <e p="Debug" t="Include">
             <e p="netcoreapp2.2" t="Include">
@@ -74,22 +71,18 @@
             </e>
           </e>
         </e>
+        <e p="SimpleInjectorCache" t="Include">
+          <e p="CacheWithTypeOverrideEqAndGHC.cs" t="Include" />
+        </e>
       </e>
       <e p="HabrCacheQueryTests" t="IncludeRecursive">
         <e p="BaseCacheTest.cs" t="Include" />
+        <e p="bin" t="ExcludeRecursive" />
         <e p="ExampleQuery" t="Include">
           <e p="DelayQuery.cs" t="Include" />
         </e>
         <e p="FodyWeavers.xsd" t="Include" />
         <e p="HabrCacheQueryTests.csproj" t="IncludeRecursive" />
-        <e p="Tests" t="Include">
-          <e p="CastleWindsor.cs" t="Include" />
-          <e p="FodyOverrideEqualsAndGetHashCodeCacheCacheTests.cs" t="Include" />
-          <e p="MediatorTests.cs" t="Include" />
-          <e p="ReflectionCacheCacheTests.cs" t="Include" />
-          <e p="SimpleInjectorCacheTests.cs" t="Include" />
-        </e>
-        <e p="bin" t="ExcludeRecursive" />
         <e p="obj" t="ExcludeRecursive">
           <e p="Debug" t="Include">
             <e p="netcoreapp2.2" t="Include">
@@ -97,6 +90,19 @@
               <e p="HabrCacheQueryTests.Program.cs" t="Include" />
             </e>
           </e>
+        </e>
+        <e p="Tests" t="Include">
+          <e p=".NetCoreContainer" t="Include">
+            <e p="CacheReflectionQuery.cs" t="Include" />
+            <e p="FodyOverrideEqualsAndGetHashCodeCacheCacheTests.cs" t="Include" />
+          </e>
+          <e p="CastleWindsor" t="Include">
+            <e p="CastleWindsor.cs" t="Include" />
+          </e>
+          <e p="Mediatr" t="Include">
+            <e p="MediatorTests.cs" t="Include" />
+          </e>
+          <e p="SimpleInjectorCacheTests.cs" t="Include" />
         </e>
       </e>
       <e p="packages" t="ExcludeRecursive" />

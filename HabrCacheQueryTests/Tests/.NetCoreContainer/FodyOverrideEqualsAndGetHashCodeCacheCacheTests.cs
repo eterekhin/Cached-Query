@@ -16,6 +16,11 @@ namespace Tests
 {
     public class FodyOverrideEqualsAndGetHashCodeCacheCacheTests : CacheUsingCoreContainerBaseTests
     {
+        public FodyOverrideEqualsAndGetHashCodeCacheCacheTests() : base()
+        {
+        }
+
+
         protected override void QueryInitial()
         {
             using (Scope)
@@ -45,6 +50,5 @@ namespace Tests
 
         private IQuery<StubForFodyCanCacheMySelf, Something> Query { get; set; }
         private IAsyncQuery<StubForFodyCanCacheMySelf, Something> AsyncQuery { get; set; }
-
     }
 }

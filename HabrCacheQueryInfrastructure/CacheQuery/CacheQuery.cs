@@ -31,12 +31,11 @@ namespace HabrCacheQuery.ServiceCollectionExtensions
         }
     }
 
-
-    public class AsyncQueryCache<TIn, TOut> : BaseCacheQuery<TIn, TOut>
+    public class AsyncQueryCache<TIn, TOut> : BaseCacheQuery<TIn, Task<TOut>>, IAsyncQuery<TIn, TOut>
     {
         public AsyncQueryCache(
-            IConcurrentDictionaryFactory<TIn, TOut> factory,
-            IQuery<TIn, TOut> query) : base(factory, query)
+            IConcurrentDictionaryFactory<TIn, Task<TOut>> factory,
+            IAsyncQuery<TIn, TOut> query) : base(factory, query)
         {
         }
     }
