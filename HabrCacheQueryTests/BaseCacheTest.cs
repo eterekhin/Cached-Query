@@ -8,46 +8,59 @@ using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.AspNetCore.Mvc;
 using Moq;
+using NUnit.Framework;
 using MockRepository = HabrCacheQuery.ExampleQuery.MockRepository;
 
 namespace Tests
 {
-    public class CacheUsingCoreContainerBaseTests : BaseCacheTest
+    public abstract class CacheUsingCoreContainerBaseTests : BaseCacheTest
     {
         protected CacheUsingCoreContainerBaseTests()
-            : base(collection =>
+        {
+        }
+
+        protected override Action<IServiceCollection> Registrations =>
+            collection =>
             {
                 collection.AddScoped<IRepository, MockRepository>(x => MockRepositoryObject);
                 collection.AddCachedQueries();
-            }, sc => sc.BuildServiceProvider())
-        {
-        }
+            };
+
+        protected override Func<IServiceCollection, IServiceProvider> ServiceProviderFactory =>
+            sc => sc.BuildServiceProvider();
+
+        protected abstract override void QueryInitial();
     }
 
-    public class BaseCacheTest
+    public abstract class BaseCacheTest
     {
-        private readonly Func<IServiceCollection, IServiceProvider> _serviceProviderFactory;
-        private readonly Action<ServiceCollection> _cachedQueryRealization;
-        protected IServiceScope ServiceScope => ServiceProvider.CreateScope();
-        private IServiceProvider ServiceProvider { get; set; }
+        protected IServiceScope Scope => ServiceProvider.CreateScope();
+        protected IServiceProvider ServiceProvider { get; set; }
 
-
-        protected BaseCacheTest(Action<IServiceCollection> registrations,
-            Func<IServiceCollection, IServiceProvider> serviceProviderFactory)
+        [SetUp]
+        public void Setup()
         {
-            _serviceProviderFactory = serviceProviderFactory;
-            ServiceProviderInitial(registrations);
+            ServiceProviderInitial();
+            QueryInitial();
         }
 
-        protected void ServiceProviderInitial(Action<IServiceCollection> Registrations)
+        protected BaseCacheTest()
+        {
+            ServiceProviderInitial();
+        }
+
+        private void ServiceProviderInitial()
         {
             RepositoryMock = new Mock<MockRepository>();
             var collection = new ServiceCollection();
 
             Registrations(collection);
-            ServiceProvider = _serviceProviderFactory(collection);
+            ServiceProvider = ServiceProviderFactory(collection);
         }
 
+        protected abstract void QueryInitial();
+        protected abstract Action<IServiceCollection> Registrations { get; }
+        protected abstract Func<IServiceCollection, IServiceProvider> ServiceProviderFactory { get; }
 
         protected static Mock<MockRepository> RepositoryMock { get; private set; } = new Mock<MockRepository>();
         protected static MockRepository MockRepositoryObject => RepositoryMock.Object;

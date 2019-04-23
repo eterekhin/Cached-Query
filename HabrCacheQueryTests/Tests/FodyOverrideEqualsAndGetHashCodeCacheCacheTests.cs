@@ -14,15 +14,14 @@ using MockRepository = HabrCacheQuery.ExampleQuery.MockRepository;
 
 namespace Tests
 {
-    public class FodyCacheCacheTests : CacheUsingCoreContainerBaseTests
+    public class FodyOverrideEqualsAndGetHashCodeCacheCacheTests : CacheUsingCoreContainerBaseTests
     {
-        [SetUp]
-        public void Setup()
+        protected override void QueryInitial()
         {
-            using (var service = ServiceScope.ServiceProvider.CreateScope())
+            using (Scope)
             {
-                AsyncQuery = service.ServiceProvider.GetService<IAsyncQuery<StubForFodyCanCacheMySelf, Something>>();
-                Query = service.ServiceProvider.GetService<IQuery<StubForFodyCanCacheMySelf, Something>>();
+                AsyncQuery = Scope.ServiceProvider.GetService<IAsyncQuery<StubForFodyCanCacheMySelf, Something>>();
+                Query = Scope.ServiceProvider.GetService<IQuery<StubForFodyCanCacheMySelf, Something>>();
             }
         }
 

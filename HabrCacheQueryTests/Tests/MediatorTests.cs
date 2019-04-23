@@ -2,6 +2,7 @@ using System;
 using System.Threading;
 using System.Threading.Tasks;
 using CacheQueryMediator;
+using CacheQueryMediator.CastleCacheInterceptor;
 using HabrCacheQuery.ExampleQuery;
 using MediatR;
 using Microsoft.Extensions.DependencyInjection;
@@ -19,10 +20,6 @@ namespace Tests
 
     public class MediatrTestRequestHandler : IRequestHandler<MediatrTestInputDto, MediatrTestOutputDto>
     {
-        public MediatrTestRequestHandler()
-        {
-        }
-
         public async Task<MediatrTestOutputDto> Handle(MediatrTestInputDto request, CancellationToken cancellationToken)
         {
             await Task.Delay(1000, cancellationToken);
@@ -34,25 +31,6 @@ namespace Tests
     {
         private IMediator Mediator { get; set; }
 
-        public MediatorTests() : base(sc =>
-        {
-            sc.AddMediatR();
-            sc.AddScoped(typeof(IPipelineBehavior<,>), typeof(CachePipelineBehaviour<,>));
-            sc.AddScoped<IRepository, MockRepository>();
-            sc.AddScoped(typeof(ICacheFactory<,>), typeof(CacheFactory<,>));
-        },x=>x.BuildServiceProvider())
-        {
-        }
-
-        [OneTimeSetUp]
-        public void oneTimeSetUp()
-        {
-            using (ServiceScope)
-            {
-                Mediator = ServiceScope.ServiceProvider.GetService<IMediator>();
-            }
-        }
-
         [Test]
         public async Task TestCachePipeline()
         {
@@ -61,5 +39,25 @@ namespace Tests
             var task = Mediator.Send(dto);
             Assert.True(task.IsCompleted);
         }
+
+        protected override void QueryInitial()
+        {
+            using (Scope)
+            {
+                Mediator = Scope.ServiceProvider.GetService<IMediator>();
+            }
+        }
+
+        protected override Action<IServiceCollection> Registrations =>
+            sc =>
+            {
+                sc.AddMediatR();
+                sc.AddScoped(typeof(IPipelineBehavior<,>), typeof(CachePipelineBehaviour<,>));
+                sc.AddScoped<IRepository, MockRepository>();
+                sc.AddScoped(typeof(IConcurrentDictionaryFactory<,>), typeof(ConcDictionaryFactory<,>));
+            };
+
+        protected override Func<IServiceCollection, IServiceProvider> ServiceProviderFactory =>
+            x => x.BuildServiceProvider();
     }
 }

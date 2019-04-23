@@ -51,7 +51,7 @@ namespace CacheQueryMediator.CastleCacheInterceptor
     }
 
     //todo возможно это лучше назвать пулом или как-нибудь иначе
-    public class CacheFactory<TIn, TOut> : IConcurrentDictionaryFactory<TIn, TOut>
+    public class ConcDictionaryFactory<TIn, TOut> : IConcurrentDictionaryFactory<TIn, TOut>
     {
         private ConcurrentDictionary<TIn, TOut> _cache { get; set; }
 

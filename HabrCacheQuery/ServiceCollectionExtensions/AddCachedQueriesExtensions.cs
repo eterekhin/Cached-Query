@@ -1,6 +1,8 @@
 using System;
+using System.Collections.Concurrent;
 using System.Collections.Generic;
 using System.Linq;
+using CacheQueryMediator.CastleCacheInterceptor;
 using HabrCacheQuery.Query;
 using HabrCacheQuery.ServiceCollectionExtensions;
 using Microsoft.Extensions.DependencyInjection;
@@ -11,8 +13,6 @@ namespace HabrCacheQuery.ServiceCollectionExtensions
     public static class AddCachedQueriesExtensions
     {
         #region predicates
-
-        
 
         private static Type GetQueryInterface(Type definition, Type destType) =>
             destType.GetInterfaces()
@@ -51,38 +51,27 @@ namespace HabrCacheQuery.ServiceCollectionExtensions
 
         public static void AddCachedQueries(this IServiceCollection serviceCollection)
         {
-            var asyncQueryScanAssemblesPredicate = AggregatePredicates(IsClass, ContainsAsyncQueryInterface);
+            var asyncQueryScanPredicate = AggregatePredicates(IsClass, ContainsAsyncQueryInterface);
 
             var queryScanAssemblesPredicate =
-                AggregatePredicates(IsClass, x => !asyncQueryScanAssemblesPredicate(x), ContainsQueryInterface);
+                AggregatePredicates(IsClass, x => !asyncQueryScanPredicate(x), ContainsQueryInterface);
 
-            var asyncQueries = GetAssemblesTypes(asyncQueryScanAssemblesPredicate, DestAsyncQuerySourceType);
+            var asyncQueries = GetAssemblesTypes(asyncQueryScanPredicate, DestAsyncQuerySourceType);
             var queries = GetAssemblesTypes(queryScanAssemblesPredicate, DestQuerySourceType);
 
-            serviceCollection.QueryDecorator(asyncQueries, (sourceType, destType) =>
-            {
-                // ReSharper disable once ConvertToLambdaExpression
-                return (EqualsGetHashCodeOverride(sourceType)
-                    ? typeof(CacheAsyncQuery<,>)
-                    : typeof(CacheAsyncQueryWithReflectionComparer<,>)).MakeGenericType(sourceType, destType);
-            });
-            serviceCollection.QueryDecorator(queries, (sourceType, destType) =>
-            {
-                // ReSharper disable once ConvertToLambdaExpression
-                return (EqualsGetHashCodeOverride(sourceType)
-                    ? typeof(CacheQuery<,>)
-                    : typeof(CacheQueryWithReflectionComparer<,>)).MakeGenericType(sourceType, destType);
-            });
+            serviceCollection.AddScoped(typeof(IConcurrentDictionaryFactory<,>), typeof(ConcDictionaryFactory<,>));
+
+            serviceCollection.QueryDecorate(asyncQueries, typeof(AsyncQueryCache<,>));
+            serviceCollection.QueryDecorate(queries, typeof(QueryCache<,>));
         }
 
-        private static void QueryDecorator(this IServiceCollection serviceCollection,
-            IEnumerable<(Type dest, Type source)> parameters,
-            Func<Type, Type, Type> sourceTypeDestTypeToDecoratorType,
+        private static void QueryDecorate(this IServiceCollection serviceCollection,
+            IEnumerable<(Type dest, Type source)> parameters, Type cacheType,
             ServiceLifetime lifeTime = ServiceLifetime.Scoped)
         {
             foreach (var (dest, source) in parameters)
                 serviceCollection.AddDecorator(
-                    sourceTypeDestTypeToDecoratorType(source.GenericTypeArguments[0], source.GenericTypeArguments[1]),
+                    cacheType.MakeGenericType(source.GenericTypeArguments[0], source.GenericTypeArguments[1]),
                     source,
                     dest,
                     lifeTime);

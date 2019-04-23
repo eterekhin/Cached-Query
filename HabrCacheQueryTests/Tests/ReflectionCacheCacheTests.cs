@@ -2,6 +2,7 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Reflection;
+using Castle.MicroKernel;
 using HabrCacheQuery.ExampleQuery;
 using HabrCacheQuery.Query;
 using HabrCacheQuery.ServiceCollectionExtensions;
@@ -12,6 +13,11 @@ using NUnit.Framework;
 namespace Tests
 {
     #region stab
+
+    public class Dto
+    {
+        public int One { get; set; }
+    }
 
     public class DtoQuery : IQuery<Dto, Something>
     {
@@ -25,10 +31,6 @@ namespace Tests
         public Something Query(Dto input) => _repository.GetSomething();
     }
 
-    public class Dto
-    {
-        public int One { get; set; }
-    }
 
     public class DtoWithIEnumerable
     {
@@ -50,49 +52,18 @@ namespace Tests
         public Something Query(DtoWithIEnumerable input) => _repository.GetSomething();
     }
 
-    public class DtoWithClass
-    {
-        public int Int { get; set; }
-        public DtoWithIEnumerable DtoWithIEnumerable { get; set; }
-    }
-
-    public class DtoWithClassQuery : IQuery<DtoWithClass, Something>
-    {
-        private readonly IRepository _repository;
-
-        public DtoWithClassQuery(IRepository repository)
-        {
-            _repository = repository;
-        }
-
-        public Something Query(DtoWithClass input) => _repository.GetSomething();
-    }
-
     #endregion
 
     public class ReflectionCacheCacheTests : CacheUsingCoreContainerBaseTests
     {
         private IQuery<Dto, Something> query { get; set; }
         private IQuery<DtoWithIEnumerable, Something> queryWithIEnumerable { get; set; }
-        private IQuery<DtoWithClass, Something> queryWithClass { get; set; }
-
-        [SetUp]
-        public void OnTimeSetup()
-        {
-            ServiceProviderInitial(sc => { });
-            using (var scope = ServiceScope)
-            {
-                query = scope.ServiceProvider.GetService<IQuery<Dto, Something>>();
-                queryWithClass = scope.ServiceProvider.GetService<IQuery<DtoWithClass, Something>>();
-                queryWithIEnumerable = scope.ServiceProvider.GetService<IQuery<DtoWithIEnumerable, Something>>();
-            }
-        }
 
         [Test]
         public void Test1()
         {
-            var dto = new Dto() {One = 1};
-            var dto1 = new Dto() {One = 1};
+            var dto = new Dto {One = 1};
+            var dto1 = new Dto {One = 1};
             query.Query(dto);
             query.Query(dto1);
             VerifyOneCall();
@@ -101,8 +72,8 @@ namespace Tests
         [Test]
         public void Test2()
         {
-            var dto = new Dto() {One = 1};
-            var dto1 = new Dto() {One = 2};
+            var dto = new Dto {One = 1};
+            var dto1 = new Dto {One = 2};
             query.Query(dto);
             query.Query(dto1);
             VerifyTwoCall();
@@ -127,25 +98,6 @@ namespace Tests
             VerifyTwoCall();
         }
 
-        [Test]
-        public void Test5()
-        {
-            queryWithClass.Query(GetDtoWithClass());
-            queryWithClass.Query(GetDtoWithClass());
-            VerifyOneCall();
-        }
-
-
-        [Test]
-        public void Test6()
-        {
-            var dto1 = GetDtoWithClass();
-            var dto2 = GetDtoWithClass();
-            dto2.DtoWithIEnumerable.En2 = Enumerable.Range(1, 1000).Select(x => x.ToString()).ToArray();
-            queryWithClass.Query(dto1);
-            queryWithClass.Query(dto2);
-            VerifyTwoCall();
-        }
 
         private DtoWithIEnumerable GetDtoWithIEnumerable()
         {
@@ -156,9 +108,13 @@ namespace Tests
             return new DtoWithIEnumerable() {En1 = en1, En2 = en2, En3 = en3, En4 = en4};
         }
 
-        private DtoWithClass GetDtoWithClass()
+        protected override void QueryInitial()
         {
-            return new DtoWithClass {DtoWithIEnumerable = GetDtoWithIEnumerable(), Int = 1};
+            using (var scope = Scope.ServiceProvider.CreateScope())
+            {
+                query = scope.ServiceProvider.GetService<IQuery<Dto, Something>>();
+                queryWithIEnumerable = scope.ServiceProvider.GetService<IQuery<DtoWithIEnumerable, Something>>();
+            }
         }
     }
 }

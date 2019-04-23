@@ -18,51 +18,6 @@ namespace Tests
         private IQuery<Dto, Something> _query { get; set; }
         private static Container Container { get; set; }
 
-        public SimpleInjectorCacheTests() : base(sc =>
-        {
-            Container = new Container();
-            var queries = Assembly.GetExecutingAssembly()
-                .ExportedTypes
-                .Select(x => new
-                {
-                    source = x.GetInterfaces().FirstOrDefault(
-                        xx => xx.IsGenericType && xx.GetGenericTypeDefinition() == typeof(IQuery<,>)),
-                    dest = x
-                })
-                .Where(x => x.source != null).GroupBy(x => x.source).ToList();
-            foreach (var query in queries)
-            {
-                var first = query.First();
-                // todo добавить множественную регистрацию
-                Container.Register(first.source, first.dest);
-            }
-
-            Container.RegisterDecorator(
-                typeof(IQuery<,>),
-                typeof(CacheWithTypeOverrideEqAndGHC<,>),
-                x => TypeCheckers.EqualsGetHashCodeOverride(x.ServiceType.GetGenericArguments()[0]));
-
-            Container.RegisterDecorator(
-                typeof(IQuery<,>),
-                typeof(DefaultCacheQuery<,>),
-                x => !TypeCheckers.EqualsGetHashCodeOverride(x.ServiceType.GetGenericArguments()[0]));
-
-            Container.Register<IRepository, MockRepository>();
-            sc.EnableSimpleInjectorCrossWiring(Container);
-            sc.UseSimpleInjectorAspNetRequestScoping(Container);
-        }, sc => sc.BuildServiceProvider())
-        {
-        }
-
-        [SetUp]
-        public void SetUp()
-        {
-            using (ServiceScope.ServiceProvider.CreateScope())
-            {
-                _query = ServiceScope.ServiceProvider.GetService<IQuery<Dto, Something>>();
-            }
-        }
-
         [Test]
         public void Test()
         {
@@ -71,5 +26,50 @@ namespace Tests
             _query.Query(dto);
             VerifyOneCall();
         }
+
+        protected override void QueryInitial()
+        {
+            using (Scope)
+            {
+                _query = Scope.ServiceProvider.GetService<IQuery<Dto, Something>>();
+            }  
+        }
+
+        protected override Action<IServiceCollection> Registrations =>
+            sc =>
+            {
+                var queries = Assembly.GetExecutingAssembly()
+                    .ExportedTypes
+                    .Select(x => new
+                    {
+                        source = x.GetInterfaces().FirstOrDefault(
+                            xx => xx.IsGenericType && xx.GetGenericTypeDefinition() == typeof(IQuery<,>)),
+                        dest = x
+                    })
+                    .Where(x => x.source != null).GroupBy(x => x.source).ToList();
+                foreach (var query in queries)
+                {
+                    var first = query.First();
+                    // todo добавить множественную регистрацию
+                    Container.Register(first.source, first.dest);
+                }
+
+                Container.RegisterDecorator(
+                    typeof(IQuery<,>),
+                    typeof(CacheWithTypeOverrideEqAndGHC<,>),
+                    x => TypeCheckers.EqualsGetHashCodeOverride(x.ServiceType.GetGenericArguments()[0]));
+
+                Container.RegisterDecorator(
+                    typeof(IQuery<,>),
+                    typeof(DefaultCacheQuery<,>),
+                    x => !TypeCheckers.EqualsGetHashCodeOverride(x.ServiceType.GetGenericArguments()[0]));
+
+                Container.Register<IRepository, MockRepository>();
+                sc.EnableSimpleInjectorCrossWiring(Container);
+                sc.UseSimpleInjectorAspNetRequestScoping(Container);
+            };
+
+        protected override Func<IServiceCollection, IServiceProvider> ServiceProviderFactory =>
+            sc => sc.BuildServiceProvider();
     }
 }

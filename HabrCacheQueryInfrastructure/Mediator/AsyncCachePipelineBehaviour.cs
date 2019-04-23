@@ -1,6 +1,7 @@
 using System.Collections.Concurrent;
 using System.Threading;
 using System.Threading.Tasks;
+using CacheQueryMediator.CastleCacheInterceptor;
 using MediatR;
 using MediatR.Pipeline;
 
@@ -10,7 +11,7 @@ namespace CacheQueryMediator
     {
         private readonly ConcurrentDictionary<TDto, Task<TResult>> _cache;
 
-        public CachePipelineBehaviour(ICacheFactory<TDto, Task<TResult>> cacheFactory)
+        public CachePipelineBehaviour(IConcurrentDictionaryFactory<TDto, Task<TResult>> cacheFactory)
         {
             _cache = cacheFactory.Create();
         }
