@@ -3,6 +3,7 @@ using System.Threading;
 using System.Threading.Tasks;
 using CacheQueryMediator;
 using CacheQueryMediator.CastleCacheInterceptor;
+using HabrCacheQuery;
 using HabrCacheQuery.ExampleQuery;
 using MediatR;
 using Microsoft.Extensions.DependencyInjection;
@@ -16,6 +17,19 @@ namespace Tests
 
     public class MediatrTestOutputDto
     {
+    }
+
+    public class Class1 : IInterface, IRequest<MediatrTestOutputDto>
+    {
+    }
+
+
+    public class Test : IRequestHandler<Class1, MediatrTestOutputDto>
+    {
+        public Task<MediatrTestOutputDto> Handle(Class1 request, CancellationToken cancellationToken)
+        {
+            return Task.FromResult(new MediatrTestOutputDto());
+        }
     }
 
     public class MediatrTestRequestHandler : IRequestHandler<MediatrTestInputDto, MediatrTestOutputDto>
@@ -34,6 +48,7 @@ namespace Tests
         [Test]
         public async Task TestCachePipeline()
         {
+            Mediator.Send(new Class1());
             var dto = new MediatrTestInputDto();
             await Mediator.Send(dto);
             var task = Mediator.Send(dto);

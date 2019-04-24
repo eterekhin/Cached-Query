@@ -20,5 +20,4 @@ namespace CacheQueryMediator
             RequestHandlerDelegate<TResult> next) =>
             await _cache.GetOrAdd(request, x => next());
     }
-
 }

@@ -11,6 +11,7 @@ namespace CacheQueryMediator.CastleCacheInterceptor
 {
     public class CacheInterceptorsSelector : IModelInterceptorsSelector
     {
+        
         public bool HasInterceptors(ComponentModel model)
         {
             return model.Services.All(x => x.IsGenericType && x.GetGenericTypeDefinition() == typeof(IQuery<,>));

@@ -54,19 +54,19 @@ namespace Tests
 
     #endregion
 
-    public class ReflectionCacheCacheTests : CacheUsingCoreContainerBaseTests
+    public class CacheReflectionTests : CacheUsingCoreContainerBaseTests
     {
         private IQuery<Dto, Something> query { get; set; }
         private IQuery<DtoWithIEnumerable, Something> queryWithIEnumerable { get; set; }
 
         [Test]
-        public void Test1()
+        public void TwoCallQueryTest()
         {
             var dto = new Dto {One = 1};
             var dto1 = new Dto {One = 1};
             query.Query(dto);
             query.Query(dto1);
-            VerifyOneCall();
+            RepositoryMock.Verify(x => x.GetSomething(), Times.Once);
         }
 
         [Test]

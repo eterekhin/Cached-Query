@@ -24,15 +24,11 @@ namespace HabrCacheQuery.ServiceCollectionExtensions
         private static readonly Func<Type, bool> ContainsAsyncQueryInterface =
             destType => GetQueryInterface(typeof(IAsyncQuery<,>), destType) != null;
 
-        private static bool IsCachedQuery(Type cacheType, Type type) =>
-            GetQueryInterface(typeof(IQuery<,>), type)?.GenericTypeArguments?.FirstOrDefault()?.BaseType ==
-            cacheType;
-
         private static readonly Func<Type, (Type dest, Type source)> DestQuerySourceType = type =>
-            (type, GetQueryInterface(typeof(IQuery<,>), type));
+            (GetQueryInterface(typeof(IQuery<,>), type), type);
 
         private static readonly Func<Type, (Type, Type)> DestAsyncQuerySourceType = type =>
-            (type, GetQueryInterface(typeof(IAsyncQuery<,>), type));
+            (GetQueryInterface(typeof(IAsyncQuery<,>), type), type);
 
         private static Func<T, bool> AggregatePredicates<T>(params Func<T, bool>[] predicates) =>
             predicates.Aggregate<Func<T, bool>, Func<T, bool>>(x => true, (a, c) => x => a(x) && c(x));
@@ -51,25 +47,30 @@ namespace HabrCacheQuery.ServiceCollectionExtensions
 
         public static void AddCachedQueries(this IServiceCollection serviceCollection)
         {
+            // Func<Type,bool> который выбирает типы реализующие IAsyncQuery
             var asyncQueryScanPredicate = AggregatePredicates(IsClass, ContainsAsyncQueryInterface);
 
+            // Func<Type,bool> который выбирает типы реализующие IQuery
             var queryScanAssemblesPredicate =
                 AggregatePredicates(IsClass, x => !asyncQueryScanPredicate(x), ContainsQueryInterface);
 
+            // все IAsyncQuery в сканируемых сборках
             var asyncQueries = GetAssemblesTypes(asyncQueryScanPredicate, DestAsyncQuerySourceType);
+            // все IQuery в сканируемых сборках
             var queries = GetAssemblesTypes(queryScanAssemblesPredicate, DestQuerySourceType);
-
+            // регистрируем фабрику создающую ConcurrentDictionary
             serviceCollection.AddScoped(typeof(IConcurrentDictionaryFactory<,>), typeof(ConcDictionaryFactory<,>));
-
+            // добавляет в services ServiceDescriptor'ы описывающие регистрацию IAsyncQuery
             serviceCollection.QueryDecorate(asyncQueries, typeof(AsyncQueryCache<,>));
+            // добавляет в services ServiceDescriptor'ы описывающие регистрацию IQuery
             serviceCollection.QueryDecorate(queries, typeof(QueryCache<,>));
         }
 
         private static void QueryDecorate(this IServiceCollection serviceCollection,
-            IEnumerable<(Type dest, Type source)> parameters, Type cacheType,
+            IEnumerable<(Type source, Type dest)> parameters, Type cacheType,
             ServiceLifetime lifeTime = ServiceLifetime.Scoped)
         {
-            foreach (var (dest, source) in parameters)
+            foreach (var (source, dest) in parameters)
                 serviceCollection.AddDecorator(
                     cacheType.MakeGenericType(source.GenericTypeArguments[0], source.GenericTypeArguments[1]),
                     source,
@@ -80,15 +81,15 @@ namespace HabrCacheQuery.ServiceCollectionExtensions
 
         private static void AddDecorator(
             this IServiceCollection serviceCollection,
-            Type dt, Type queryType,
-            Type destType,
+            Type cacheType, Type querySourceType,
+            Type queryDestType,
             ServiceLifetime lifetime = ServiceLifetime.Scoped)
         {
             // ReSharper disable once ConvertToLocalFunction
-            Func<IServiceProvider, object> factory = provider => ActivatorUtilities.CreateInstance(provider, dt,
-                ActivatorUtilities.GetServiceOrCreateInstance(provider, destType));
+            Func<IServiceProvider, object> factory = provider => ActivatorUtilities.CreateInstance(provider, cacheType,
+                ActivatorUtilities.GetServiceOrCreateInstance(provider, queryDestType));
 
-            serviceCollection.Add(new ServiceDescriptor(queryType, factory, lifetime));
+            serviceCollection.Add(new ServiceDescriptor(querySourceType, factory, lifetime));
         }
     }
 }
