@@ -44,7 +44,9 @@
     </ItemGroup>
 
     <ItemGroup>
-      <Compile Include="Tests\.NetCoreContainer\FodyOverrideEqualsAndGetHashCodeCacheCacheTests.cs" />
+      <Compile Include="Tests\.NetCoreContainer\CacheReflectionQuery.cs" />
+      <Compile Include="Tests\.NetCoreContainer\CacheUsingCoreContainerBaseTests.cs" />
+      <Compile Include="Tests\.NetCoreContainer\FodyOverrideEqualsAndGetHashCodeCacheTests.cs" />
     </ItemGroup>
 
 </Project>

@@ -14,13 +14,8 @@ using MockRepository = HabrCacheQuery.ExampleQuery.MockRepository;
 
 namespace Tests
 {
-    public class FodyOverrideEqualsAndGetHashCodeCacheCacheTests : CacheUsingCoreContainerBaseTests
+    public class FodyOverrideEqualsAndGetHashCodeCacheTests : CacheUsingCoreContainerBaseTests
     {
-        public FodyOverrideEqualsAndGetHashCodeCacheCacheTests() : base()
-        {
-        }
-
-
         protected override void QueryInitial()
         {
             using (Scope)

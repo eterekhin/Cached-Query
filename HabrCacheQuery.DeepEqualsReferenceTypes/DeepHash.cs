@@ -5,21 +5,21 @@ using System.Linq;
 
 namespace HabrCacheQuery.ServiceCollectionExtensions
 {
-    public static class Hash
+    public static class DeepHash
     {
-        public static int GetHashCode(object obj) => MatchAndAction(obj);
+        public static int DeepGetHashCode(object obj) => MatchAndAction(obj);
 
         private static int PrimitiveHashCode(object obj) => obj.GetHashCode();
 
         private static int ClassHashCode(object obj) =>
-            DeepEquals.GetPropFieldValue(obj).Aggregate(0, (a, c) => a ^ GetHashCode(c.value) * 357);
+            DeepEquals.GetPropFieldValue(obj).Aggregate(0, (a, c) => a ^ DeepGetHashCode(c.value) * 357);
 
         private static int IEnumerableGetHashCode(object obj)
         {
             var enumerator = (obj as IEnumerable).GetEnumerator();
             var hash = 0;
             while (enumerator.MoveNext())
-                hash ^= GetHashCode(enumerator.Current);
+                hash ^= DeepGetHashCode(enumerator.Current);
 
             return hash;
         }
@@ -27,7 +27,7 @@ namespace HabrCacheQuery.ServiceCollectionExtensions
         private static int KeyValuePairGetHashCode(object obj)
         {
             dynamic keyValuePair = obj;
-            return GetHashCode(keyValuePair.Key) ^ GetHashCode(keyValuePair.Value);
+            return DeepGetHashCode(keyValuePair.Key) ^ DeepGetHashCode(keyValuePair.Value);
         }
 
         private static int MatchAndAction(object obj)
