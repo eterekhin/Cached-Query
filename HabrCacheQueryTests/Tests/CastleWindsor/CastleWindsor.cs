@@ -25,7 +25,6 @@ namespace Tests
         public void OneQueryTest()
         {
             var dto = new Dto {One = 12};
-            var s =query1;
             query1.Query(dto);
             query1.Query(dto);
             RepositoryMock.Verify(x => x.GetSomething(), Times.Once);
