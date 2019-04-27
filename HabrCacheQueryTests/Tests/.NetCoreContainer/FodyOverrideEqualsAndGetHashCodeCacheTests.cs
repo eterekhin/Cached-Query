@@ -2,7 +2,6 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text.RegularExpressions;
-using System.Threading;
 using System.Threading.Tasks;
 using HabrCacheQuery.ExampleQuery;
 using HabrCacheQuery.Query;
@@ -30,10 +29,9 @@ namespace Tests
         public async Task AsyncQueryTest()
         {
             var stub = new StubForFodyCanCacheMySelf();
-            var s = AsyncQuery.Query(stub);
-            var ss = s.Status;
-            Thread.Sleep(3000);
-            Assert.True(s.IsCompleted);
+            await AsyncQuery.Query(stub);
+            var task = AsyncQuery.Query(stub);
+            Assert.True(task.IsCompleted);
         }
 
         [Test]

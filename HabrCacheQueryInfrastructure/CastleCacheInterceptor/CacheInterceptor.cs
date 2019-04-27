@@ -26,4 +26,6 @@ namespace CacheQueryMediator.CastleCacheInterceptor
             }
         }
     }
+
+    //todo возможно это лучше назвать пулом или как-нибудь иначе
 }
