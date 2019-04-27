@@ -10,6 +10,26 @@ using static HabrCacheQuery.ServiceCollectionExtensions.TypeCheckers;
 
 namespace HabrCacheQuery.ServiceCollectionExtensions
 {
+    #region ScanAssembly
+    public static class ScanAssembly
+    {
+        public static (Type dest, Type source)[] GetAssemblesTypes(Func<Type, bool> predicate,
+            Func<Type, (Type, Type)> selector) => AppDomain
+            .CurrentDomain
+            .GetAssemblies()
+            .SelectMany(x => x.GetTypes())
+            .Where(predicate)
+            .Select(selector)
+            .ToArray();
+
+        public static (Type dest, Type source)[] GetTypeByInterfaceInAssembly(Type[] interfaceTypes)
+            => interfaceTypes.SelectMany(x => GetAssemblesTypes(xx => xx.GetInterfaces().Contains(x),
+                    xx => (dest: xx, source: xx.GetInterfaces().First(xxx => xxx == x))))
+                .ToArray();
+    }
+
+    #endregion
+
     public static class AddCachedQueriesExtensions
     {
         #region predicates
@@ -34,14 +54,6 @@ namespace HabrCacheQuery.ServiceCollectionExtensions
             predicates.Aggregate<Func<T, bool>, Func<T, bool>>(x => true, (a, c) => x => a(x) && c(x));
 
         // ReSharper disable once ReturnTypeCanBeEnumerable.Local
-        private static (Type dest, Type source)[] GetAssemblesTypes(Func<Type, bool> predicate,
-            Func<Type, (Type, Type)> selector) => AppDomain
-            .CurrentDomain
-            .GetAssemblies()
-            .SelectMany(x => x.GetTypes())
-            .Where(predicate)
-            .Select(selector)
-            .ToArray();
 
         #endregion
 
@@ -55,9 +67,9 @@ namespace HabrCacheQuery.ServiceCollectionExtensions
                 AggregatePredicates(IsClass, x => !asyncQueryScanPredicate(x), ContainsQueryInterface);
 
             // все IAsyncQuery в сканируемых сборках
-            var asyncQueries = GetAssemblesTypes(asyncQueryScanPredicate, DestAsyncQuerySourceType);
+            var asyncQueries = ScanAssembly.GetAssemblesTypes(asyncQueryScanPredicate, DestAsyncQuerySourceType);
             // все IQuery в сканируемых сборках
-            var queries = GetAssemblesTypes(queryScanAssemblesPredicate, DestQuerySourceType);
+            var queries = ScanAssembly.GetAssemblesTypes(queryScanAssemblesPredicate, DestQuerySourceType);
             // регистрируем фабрику создающую ConcurrentDictionary
             serviceCollection.AddScoped(typeof(IConcurrentDictionaryFactory<,>), typeof(ConcDictionaryFactory<,>));
             // добавляет в services ServiceDescriptor'ы описывающие регистрацию IAsyncQuery
@@ -72,7 +84,7 @@ namespace HabrCacheQuery.ServiceCollectionExtensions
         {
             foreach (var (source, dest) in parameters)
                 serviceCollection.AddDecorator(
-                    cacheType.MakeGenericType(source.GenericTypeArguments[0], source.GenericTypeArguments[1]),
+                    cacheType.MakeGenericType(source.GenericTypeArguments),
                     source,
                     dest,
                     lifeTime);
