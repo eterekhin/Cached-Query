@@ -56,6 +56,19 @@ namespace Tests
 
     public class CacheReflectionTests : CacheUsingCoreContainerBaseTests
     {
+        #region helpers
+
+        private DtoWithIEnumerable GetDtoWithIEnumerable()
+        {
+            var en1 = Enumerable.Range(1, 100).ToList();
+            var en2 = Enumerable.Range(1, 100).Select(x => x.ToString()).ToArray();
+            var en3 = Enumerable.Range(1, 100).Select(x => x % 2 != 0).ToList();
+            var en4 = Enumerable.Range(1, 100).ToDictionary(x => x, x => x.ToString());
+            return new DtoWithIEnumerable() {En1 = en1, En2 = en2, En3 = en3, En4 = en4};
+        }
+
+        #endregion
+        
         private IQuery<Dto, Something> query { get; set; }
         private IQuery<DtoWithIEnumerable, Something> queryWithIEnumerable { get; set; }
 
@@ -66,11 +79,11 @@ namespace Tests
             var dto1 = new Dto {One = 1};
             query.Query(dto);
             query.Query(dto1);
-            RepositoryMock.Verify(x => x.GetSomething(), Times.Once);
+            VerifyOneCall();
         }
 
         [Test]
-        public void Test2()
+        public void CallTwoDifferentQuery()
         {
             var dto = new Dto {One = 1};
             var dto1 = new Dto {One = 2};
@@ -80,7 +93,7 @@ namespace Tests
         }
 
         [Test]
-        public void Test3()
+        public void TwoCallQueryTestDtoWithSequence()
         {
             queryWithIEnumerable.Query(GetDtoWithIEnumerable());
             queryWithIEnumerable.Query(GetDtoWithIEnumerable());
@@ -88,7 +101,7 @@ namespace Tests
         }
 
         [Test]
-        public void Test4()
+        public void TwoCallQueryTestDifferentDtoWithSequence()
         {
             var dto1 = GetDtoWithIEnumerable();
             var dto2 = GetDtoWithIEnumerable();
@@ -99,14 +112,6 @@ namespace Tests
         }
 
 
-        private DtoWithIEnumerable GetDtoWithIEnumerable()
-        {
-            var en1 = Enumerable.Range(1, 100).ToList();
-            var en2 = Enumerable.Range(1, 100).Select(x => x.ToString()).ToArray();
-            var en3 = Enumerable.Range(1, 100).Select(x => x % 2 != 0).ToList();
-            var en4 = Enumerable.Range(1, 100).ToDictionary(x => x, x => x.ToString());
-            return new DtoWithIEnumerable() {En1 = en1, En2 = en2, En3 = en3, En4 = en4};
-        }
 
         protected override void QueryInitial()
         {
